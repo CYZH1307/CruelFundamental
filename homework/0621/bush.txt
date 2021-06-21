@@ -1,0 +1,15 @@
+Encryption part for https
+1. cilent send request to get servers info
+2. server send back its certificate and public key
+3. client send request to CA to check servers' certificate
+4. client send some info encrypted with server's public key
+-5. client begin to generate key and would use it for further encryption
+-6. server get client's info, and begin to generate key with the same algo with client and would use it for further encryption
+*in 5 and 6, client and server would have a same key, and would use it to encrypt their message
+
+Common part(both http&https)
+1. client request DNS to get server's IP
+2. client build TCP connections with server
+3. client send URI with params to server
+4. server give response to client
+5. connection released(end of http call)
