@@ -31,21 +31,4 @@ public:
     cout << "60 mph" <<endl;
   }
 }
-
-class Bike : class Vehicle {
-public:
-  void run() {
-    cout << "10 mph" <<endl;
-  }
-}
-
-
-int main(int argc, char** argv) {
-  Vehicle* v = new Car();
-  v.run();
-  v = new Bike();
-  v.run();
-  
-  return 0;
-}
 ```
