@@ -1,0 +1,52 @@
+面向对象有哪些特征，并用你熟悉的语言描述如何实现
+
+面向对象三大基本特征：封装、继承和多态。
+封装指对外隐藏一些数据和具体的接口实现，仅暴露给外部调用方一些 public 接口。
+继承指子类可以获得父类的属性的方法。
+多态指类的方法会根据指针实际指向的对象的类型来决定，c++ 中用 virtual 关键字来标识多态的方法。
+
+封装
+class A {
+  private:
+    int b;
+  public:
+    int getB() {
+      return this->b;
+    }
+};
+类 A 有一个私有成员变量 b， 无法从外部直接取值，封装了一个 getB() 方法来返回 b 的值。
+
+继承
+class A {
+  private:
+    int b;
+};
+
+class B : public A {
+};
+类 B 继承了类 A，因此类 B 中也有一个私有成员变量 b， 也可以通过 B.getB() 方法来获得 b 的值。
+
+多态
+class A {
+  private:
+    int b;
+  public:
+    virtual int getB() {
+      return this->b;
+    }
+    A(int b) {
+      this->b = b;
+    }
+};
+
+class B : public A {
+  public:
+    int getB() {
+      return 0;
+    }
+    B(int b) : A(b) {
+    }
+};
+
+A *a = new B(10);
+a->getB() 会返回 0，因为基类指针 *a 实际指向的是子类 B 的对象，并且 getB() 方法为虚函数，实际调用时会从 B 类的虚函数表中去执行 getB()，因此不会返回 B.b 的值而是直接返回 0。
