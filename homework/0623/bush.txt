@@ -1,0 +1,11 @@
+TCP handshake
+1. server start listening new request
+2. client send request to server to build connection(1st message)
+3. server get request
+*now server confirmed client could 'send' message
+4. server send a message back, to confirm the connection request(2nd message)
+5. client get server's message
+*now client confirmed server could 'receive' and 'send' message
+6. client send a message to server(3rd message)
+7. server get the message, and now the whole tcp connection is created
+*now server confirmed client could 'receive' message
