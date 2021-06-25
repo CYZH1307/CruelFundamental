@@ -1,0 +1,153 @@
+A singleton is a class that only allow one instance to be created.
+
+Characters
+. A single private parameterless constructor
+. Sealed class
+. Single static instance
+. Single static getInstance method
+
+1. not theard-safe
+  reads occur after lock, writes occur before unlock
+  public sealed class BadCode
+  {
+    private static BadCode instance=null;
+
+    private BadCode()
+    {
+    }
+
+    public static BadCode Instance
+    {
+      get
+      {
+        if (instance==null)
+      {
+        instance = new BadCode();
+      }
+        return instance;
+      }
+    }
+  }
+  
+2. simple thread-safe but slow
+  slow - lock is acquired every time the instance is requested
+  public sealed class Singleton
+  {
+    private static Singleton instance = null;
+    private static readonly object padlock = new object();
+
+    Singleton()
+    {
+    }
+
+    public static Singleton Instance
+    {
+      get
+      {
+        lock (padlock)
+        {
+          if (instance == null)
+          {
+            instance = new Singleton();
+          }
+          return instance;
+        }
+      }
+    }
+  }
+  
+3. attempted thread-safe using double-check locking
+  doen't work in Java, broken in the ECMA CLI specification too, can go wrong easily, still slow
+  public sealed class Singleton
+  {
+    private static Singleton instance = null;
+    private static readonly object padlock = new object();
+
+    Singleton()
+    {
+    }
+
+    public static Singleton Instance
+    {
+      get
+      {
+        if (instance == null)
+        {
+          lock (padlock)
+          {
+            if (instance == null)
+            {
+              instance = new Singleton();
+            }
+          }
+        }
+        return instance;
+      }
+    }
+  }
+  
+4. not lazy(initialized before constructor is called) but thread-safe without locking
+  public sealed class Singleton
+  {
+    private static readonly Singleton instance = new Singleton();
+
+    // Explicit static constructor to tell C# compiler
+    // not to mark type as beforefieldinit
+    static Singleton()
+    {
+    }
+
+    private Singleton()
+    {
+    }
+
+    public static Singleton Instance
+    {
+      get
+      {
+      return instance;
+      }
+    }
+  }
+  
+5. fully lazy instantiation
+  public sealed class Singleton
+  {
+    private Singleton()
+    {
+    }
+
+    public static Singleton Instance { get { return Nested.instance; } }
+
+    private class Nested
+    {
+    // Explicit static constructor to tell C# compiler
+    // not to mark type as beforefieldinit
+    static Nested()
+    {
+    }
+
+    internal static readonly Singleton instance = new Singleton();
+    }
+  }
+  
+6. using .NET 4's Lazy<T> type
+  public sealed class Singleton
+  {
+    private static readonly Lazy<Singleton>
+        lazy =
+        new Lazy<Singleton>
+            (() => new Singleton());
+
+            public static Singleton Instance { get { return lazy.Value; } }
+
+            private Singleton()
+            {
+            }
+   }
+
+
+
+
+Ref
+https://csharpindepth.com/articles/singleton
