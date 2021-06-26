@@ -1,0 +1,21 @@
+HTTP is a TCP/IP based communication protocol for data exchange on the Web between client and server.
+
+default port is TCP80, specifies how client construct request data and sends to server, and how server response to these requests.
+Three components: client, proxy, server
+client: application who sends request
+proxy: can be gateway or cache, e.g., routers and moderns; used for filter, cache, load balance, authentication, log
+server: can be a group of machine who can even share one IP, responds to client requests
+
+Before a client and server can exchange an HTTP request/response pair, they must establish a TCP connection
+HTTP/1.0 is to open a separate TCP connection for each HTTP request/response pair.
+HTTP/1.1 introduced pipelining and persistent connections
+HTTP/2 multiplex messages over a single connection
+
+HTTP flow
+1. open TCP connection
+2. send an HTTP message
+3. Read the response sent by the server
+4. Close or reuse the connection for further requests
+
+ref
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
