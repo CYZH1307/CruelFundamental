@@ -1,0 +1,14 @@
+1. Java 内存管理模型
+For java, there are mainly 3 parts of memories, counter, stack and heap.
+Counter is a pointer of where the program processed.
+Stack is a private memory for every running thread.
+It's consisted by 'stack frame', which contains local variable, reference of runtime constant, and some other attribute owned by each thread.
+Heap is a shared  memory for all threads.
+Java only clean&collect memory in the heap part. When you create an object, it's allocate memory in heap and return the reference/address.
+2. 对象生命周期
+creation, referenced/be used, unreachable, cleared.
+creation: object's construct function is called to create an object and return its reference/address.
+referenced/be used: from JVM's root set, you could find a reference of this object. This means the object is still on using, which could prevent GC to collect its memory.
+unreachable: If can't find any path to this object from JVM's root set, the object would be marked as unreachable by GC, which means its memory would be cleared.
+cleared: When an object's memory is cleared, it meets the end of its life cycle. The memory of this object is released.
+
