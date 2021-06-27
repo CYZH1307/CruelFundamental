@@ -16,8 +16,9 @@
 -Xms最小堆空间大小，-Xmx最大堆空间大小
 
 ### 新生代 Young Generation
---XX:NewSize最小新生代大小，-XX:MaxNewSize最大新生代大小，-Xmn新生代大小
---XX:NewRatio新生代和老年代的大小比例，默认1/15
+- --XX:NewSize最小新生代大小，-XX:MaxNewSize最大新生代大小
+- --Xmn新生代大小
+- --XX:NewRatio新生代和老年代的大小比例，默认1/15
 - Minor GC，复制算法
 
 #### Eden 伊甸园
