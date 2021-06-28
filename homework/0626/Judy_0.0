@@ -1,0 +1,34 @@
+C# memory management
+
+lifetime
+C# employs automatic memory management
+1. when object is created, memory is allocated for it, the constructor is run, and the object is considered live.
+2. if an object is consider no longer in use, it is eligible for deconstruction.
+  Node node = new Node();
+  node = null;
+  the garbage collctor may treat the 'node' is no longer in use
+3. later, the deconstructor of the object is called onece unless otherwise specified
+4. once the deconstructor is run, if the object cannot be accessed, the object is considered to be inaccessible and eligible for collection
+5. later, GC frees the memory associated with that object.
+
+Stack and Heap
+Common Language Runtime allocates memory for objects in Heap and Stack.
+1. Stack
+  variables allocated on the stack are stored directly to the memory and access to this memory is very fast
+  the allocation is done when the program is compiled
+  when a method is invocked, the CLR bookmarks the top of stacks
+  the method then pushes data onto the stack as it executes
+  when the method completes, the CLR reset the stack to its previous bookmark
+2. Heap
+  allows objects to be allocated or deallocated in a random order.
+  variables have their memory allocated at run time and accessing this memory is a bit slower
+  but the heap size is only limited by the size of virtual memory.
+  the heap requires the overhead of a garbage collector to keep things in order.
+  e.g.
+  in Stack, there is a pointer to the reference type, and in heap, it has the reference type
+  GC will collecte the reference type when the pointer is gone
+
+
+ref
+https://www.informit.com/articles/article.aspx?p=474652&seqNum=9
+https://medium.com/c-programming/c-memory-management-part-1-c03741c24e4b
