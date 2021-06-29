@@ -1,0 +1,19 @@
+Difference between B and B+ tree
+used for multi level index for DB
+B tree:
+  nodes are sorted in the inorder traversal, with the lowest value on the left and the highest value on the right.
+  a node can have more than two children
+  self-balancing: the height is adjusted automatically at each update. leaves are on the same level, no empty sub tree above leaves
+  
+B+ tree
+  sort data pointers only at leaves, data pointers only present at leaves
+  the leaf nodes must store all the key values along with their corresponding data pointers to the disk file block
+  leaf nodes are linked to providing ordered access to the records
+  
+Binary tree -> m way search tree(more than two children) - > B tree(has specific rule, buttom up) 
+-> B+ tree(pointers are all on leaves, not on the node above leaves, and one leaf pointers the next leaf in order)
+
+
+ref
+https://www.geeksforgeeks.org/difference-between-b-tree-and-b-tree/
+https://www.youtube.com/watch?v=aZjYr87r1b8
