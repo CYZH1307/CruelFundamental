@@ -24,10 +24,46 @@
 ## 0628
 - 针对你熟悉的编程语言和版本，描述HashMap如何实现的。
 
+## 0629
+- 悲观锁和乐观锁
+
+## 0630
+- java的基本数据类型和字节数
+
+## 0701
+- 进程和线程，区别，哪个效率高，为什么
+
+## 0702
+- String，StringBuffer, StringBuilder区别
+
+## 0703
+- 死锁的条件，如何解决
+
+## 0704
+- java泛型
+
 ## Pending
 - 请问Redis 相比 Memcached 有哪些优势?
+- mysqI索引结构,特点，为什么使用这个
+- 聚集索引和非聚集索引
+- 垃圾回收机制GC, cms, G1,垃圾回收的算法
+- 子类和父类的实例变量和方法有什么区别
+- 重载和覆盖区别，返回值类型不同，可以重载吗，为什么
+- mysql底层原理，为什么效率高，主键能不能太大，为什么
+- linux查询tcp连接处理CLOSE_ WAIT的状态的数目
+- RabbitMQ, kafka, RocketMQ, ActiveMQ, 以及其他消息中间件
+- redis为什么效率高，线程，数据结构,网络模型，aio, nio, bio, 为什么这么设计？如何处理高并发
+- 数据仓库和数据湖的区别
+- 分布系统的设计，分布式系统CAP，分布式系统的模型
+- linux环境下的线上业务管理有没有，如何管理
+- redis的集合有没有限制，限制是多少
+- redis的1w条的插入和更新有什么区别
+- mysql join的底层原理是什么，有哪几种(不是左右连接这种)
+- linux命令查询一个文件内出现重复最多的数字的
+- linux命令查询一个文件的行数
 
-
+## Reference
+- https://mp.weixin.qq.com/s/jzII5_p5KcXxmbLRH1GYRw
 
 
 

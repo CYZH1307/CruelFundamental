@@ -1,0 +1,24 @@
+HashMap in C#
+
+C# doesn't have HashMap but the closest one is Dictionary, which is similar as Map in Java
+to get the value by key: myDictionary[key] = value
+
+null key:
+  java allow null key, while c# throws ArgumentNullException
+  
+duplicate:
+  java replaces with new one
+  c# replaces with new one when use [], but throw ArgumentException when use Add method
+
+non-existing:
+  Java returns null
+  C# throws KeyNotFoundException, can use TryGetValue or ContainsKey to check
+  
+behind the HashMap in java
+  1. get the hash code of key
+  2. imagine there are n(16) bucket for the map, hashcode & n to find the bucket to put the value
+  3. in the bucket, there is a node(linked list), node has key, value, hashcode, and next pointer
+  
+  Ref
+  https://stackoverflow.com/questions/1273139/c-sharp-java-hashmap-equivalent
+  https://www.youtube.com/watch?v=CojCE-ojdGY
