@@ -1,0 +1,4 @@
+在c++的unordered_map的内部有许多的桶(bucket)，这些桶的具体数量可以通过bucket_count()得到。
+每当有一个元素被插入unordered_map，会将key,value按照key的hash值分配到一个桶。
+因为c++通过collison chaining解决多个key,value pair被分配到同一个桶中的情况。所以当hash collison发生时，新的k,v pair会被插入到桶的后面，每一个桶接近于一个list。 
+c++将实际的所有元素的数量与桶的数量的比值称作load_factor，同样的，unordered_map 有一个 max_load_factor 的参数,如果现在的load_factro大于max_load_Factor,桶的数量会增加并且rehash会发生。
