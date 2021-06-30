@@ -1,0 +1,8 @@
+HashMap always have size of pow(2, x), and java use the size to do hash for every value.
+In early java version(before java8), HashMap is implemented by array and list.
+But as it would cost a lot when there are a lot of collisions, which would make the list very long and take lots of time for query.
+In java8, red-black tree is imported to instead the list when the data size is big or there are lots of collisions.
+It's a balanced binary search tree and reduce the worst query time complexity from O(n) to O(log(n)).
+There is also another implement for HashMap in Java which supports multi-threading access, called ConcurrentHashMap.
+In java7, ConcurrentHashMap would be locked by Segment. 
+But in java8, it's locked by bucket(the root of whole list chain or red-black tree), it uses synchronized and CAS to do the lock.
