@@ -1,0 +1,63 @@
+饿汉模式
+
+type singleton struct{}
+
+s := &singleton{}
+
+func get() *singleton {
+  return s
+}
+
+实现简单最为简单的多线程单例模式，服务启动的时候就会被加载，可能会造成资源的浪费。
+
+懒汉模式
+
+type singleton struct{}
+
+var s *singleton
+var m sync.Mutex
+
+func get() *singleton {
+  m.Lock()
+  if s == nil {
+    s = &singleton{}
+  }
+  m.Unlock()
+  return s
+}
+
+为了支持多线程，懒汉模式需要加锁来保证对象只初始化一次。但是每次调用 get() 方法获取示例都需要获取锁，势必导致性能下降。
+
+懒汉模式 + 双重锁
+
+type singleton struct{}
+
+var s *singleton
+var m sync.Mutex
+
+func get() *singleton {
+  if s == nil {
+    m.Lock()
+    if s == nil {
+      s = &singleton{}
+    }
+    m.Unlock()
+  }
+  return s
+}
+
+双重锁机制可以保证在第一次初始化完成后调用 get() 方法时避免锁的开销，提高性能。
+
+据说 go 的 sync 标准包中自带只执行一次的实现，可以避免手动引入锁带来的代码复杂度
+
+type singleton struct{} 
+
+var s *singleton 
+var o sync.Once
+ 
+func get() *singleton {
+  o.Do(func() {
+    s = &singleton{}
+  })
+  return s
+}

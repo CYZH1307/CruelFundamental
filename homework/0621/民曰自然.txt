@@ -1,0 +1,9 @@
+Q
+Please describe what happens when you click on a URL in your browser.
+1 用户输入url。
+2 浏览器尝试通过dns cache拿到server的ip地址。
+3 如果url没有存储在local dns cache,浏览器通过dns服务器拿到server的ip地址。
+4 浏览器向server发起tcp链接。
+5 当tcp链接建立后，浏览器发送get请求。 
+6 server响应这个请求，并返回相应的内容。
+7 浏览器解析和渲染内容，展示给用户。

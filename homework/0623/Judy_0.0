@@ -1,0 +1,30 @@
+TCP 3-Way Handshake Process
+
+Definition: Transimission Control Protocol - a protocol used in TCP/IP network to control the transmission of the data in a reliable way between client and server.
+  It is prior to the real data communication process starts.
+  
+Steps
+client(SYN = 1234) -> server
+clinet <- server(ACK-SYN ACK = 1235, SYN = 7788)
+client(ACK = 7789) ->server
+...
+FIN
+
+1. client establishes a connection with a server. It sends a segment with SYN packet and informs the server about the client should start communication.
+  The package contains a random sequence number(e.g., 1234) that indicates the beginning of the sequence numbers for data that client should transfer.
+2. server acknownledges the client request by responding with SYN-ACK signal set. 
+  a. ACK signifies the segment in step 1 is received (e.g. 1234 + 1 = 1235)
+  b. SYN signifies what sequence num(e.g., 7788) it should start with the segments.
+3. client acknowledges(ACK sequence num = 7788 + 1 = 7799) the response of the server, and they both create a stable connection will begin the actual data transfer process.
+...
+After the data transmission process is over, TCP automatically terminates the connection between client and server.
+
+
+Sample: https://github.com/refinedcoding/CrualFundamental/blob/main/homework/0621/Judy_0.0
+  where client establishs connection to remote server using TCP  
+  
+
+Ref
+https://www.guru99.com/tcp-3-way-handshake.html
+https://www.geeksforgeeks.org/tcp-3-way-handshake-process/
+
