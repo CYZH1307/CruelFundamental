@@ -1,0 +1,24 @@
+1. Pessimistic Lock
+1> Concept
+Pessimistic Lock is a kind of lock that regards every request would update the same record.
+The lock could only be released when the first lock owner had finished(succeed/failed) his transactrion, which means, other editing requests have to wait until it's finished.
+2> Implement
+It's widely supported by most of the relational database, like read/write lock.
+Also, Java's sychronized and ReentrantLock are kind of Pessimistic Lock.
+3> Advantage
+It could have a better performance when the cost of merging simultaneous changes is great high.
+4> Disadvantage
+Hard to control and easy to lead to dead lock.
+For example a user acquired a lock and never release, other requests for acquiring this lock would pending waiting.
+
+2. Optimistic Lock
+1> Concept
+Optimistic Lock is the contrary of Pessimistic Lock.
+It would regards all the requests won't update the same record and allow concurrent operations(read/write).
+When you read/write data, it would check versions/timestamp/some other unique signature to make sure the data is not changed since you viewed.
+2> Implement
+CAS, Java's Atomic class.
+3> Advantage
+It could improve systems' capacity.
+4> Disadvantage
+When there are lots of collisions, the comparing strategy would have a high cost of CPU, and would lead to bad performance.
