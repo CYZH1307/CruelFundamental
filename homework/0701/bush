@@ -1,0 +1,18 @@
+Threads and Process.
+1. Concept
+Process is a running program, it has at least one thread for execution and is the minimum unit when allocate resources. 
+Thread is part of the process, it's the minimum unit that can be scheduled to execute.
+2. Relationship
+One process could have at least one thread.
+Thread can only use its process's resources, it can't apply new resources.
+3. Resource Sharing
+Processes don't share resources.
+Threads within one process could share some resources(like memory) and resource competetion could be happened.
+4. Communication
+Communication between threads within a single process could be quite quick.
+But cross-process-comunication would have a heavy cost.
+
+Which have a better performance?
+Thread.
+It is much more lightweight than process and has smaller cost for creation and context switching.
+Even for one process which has only one thread, it should first apply for resources and then begin to schedule the thread to be executed.
