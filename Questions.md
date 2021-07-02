@@ -34,7 +34,7 @@
 - 进程和线程，区别，哪个效率高，为什么
 
 ## 0702
-- String，StringBuffer, StringBuilder区别
+- 针对你熟悉的编程语言，描述字符串类型的内存管理机制，比如String，StringBuffer, StringBuilder区别
 
 ## 0703
 - 死锁的条件，如何解决
