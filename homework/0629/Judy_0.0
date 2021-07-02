@@ -1,0 +1,29 @@
+Pessimistic and optimistic locking
+
+Pessimistic lock
+  lock the resource from the time it is first accessed in a transaction until the transaction is finished
+  To use pessimistic locking you need either a direct connection to the database or an externally available transaction ID that can be used independently of the connection.
+  In the latter case you open the transaction with the TxID and then reconnect using that ID. 
+      The DBMS maintains the locks and allows you to pick the session back up through the TxID. 
+      This is how distributed transactions using two-phase commit protocols (such as XA or COM+ Transactions)
+  cons: deadlocks; if the transaction only read it then it will waste time blocking others
+  pros: safer
+  use case: bank transaction
+  
+Optimistic lock
+  assumes that multiple transactions can frequently complete without interfering with each other.
+  when lock access the resource, the state of resource is saved
+  Other transactions still can concurrently access to the resource conflicts changing may occur
+  At commit time, when the resource is about to be updated in persistent storage, 
+      the state of the resource is read from storage again and compared to the state that was saved when the resource was first accessed in the transaction. 
+      If the two states differ, a conflicting update was made, and the transaction will be rolled back.
+  cons: handle conflict
+  pros: faster
+  use case: is generally used in environments with low data contention, high-volume systems and three-tier architectures where you do not necessarily maintain a connection to the database for your session
+            in backend code, have two parts, one for DB read and write, and the other one for transaction, put all transactions together and make one DB read/write request  
+
+ref
+https://docs.jboss.org/jbossas/docs/Server_Configuration_Guide/4/html/TransactionJTA_Overview-Pessimistic_and_optimistic_locking.html
+https://en.wikipedia.org/wiki/Optimistic_concurrency_control
+https://stackoverflow.com/questions/129329/optimistic-vs-pessimistic-locking
+

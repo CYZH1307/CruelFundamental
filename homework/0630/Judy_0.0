@@ -1,0 +1,35 @@
+C#      type/keyword	            Range	Size	                  
+sbyte	  -128 to 127	              Signed 8-bit integer	
+byte	  0 to 255	                Unsigned 8-bit integer	
+short	  -32,768 to 32,767	        Signed 16-bit integer	
+ushort	0 to 65,535	              Unsigned 16-bit integer	
+int	    -2,147,483,648 to 2,147,483,647	Signed 32-bit integer	
+uint	  0 to 4,294,967,295	      Unsigned 32-bit integer	
+long	  -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807	
+ulong	  0 to 18,446,744,073,709,551,615	Unsigned 64-bit integer	
+nint	  Depends on platform	      Signed 32-bit or 64-bit integer These are 32-bit integers when running in a 32-bit process, or 64-bit integers when running in a 64-bit process.
+nuint	  Depends on platform	      Unsigned 32-bit or 64-bit integer
+
+float	    ±1.5 x 10−45 to ±3.4 x 1038	~6-9 digits	      4 bytes	System.Single
+double	  ±5.0 × 10−324 to ±1.7 × 10308	~15-17 digits	  8 bytes	System.Double
+decimal	  ±1.0 x 10-28 to ±7.9228 x 1028	28-29 digits	16 bytes	System.Decimal
+
+bool    true/false        1 byte
+char	  U+0000 to U+FFFF	2 bytes
+
+
+
+int a = 123;
+System.Int32 b = 123;
+var decimalLiteral = 42;
+var hexLiteral = 0x2A;
+var binaryLiteral = 0b_0010_1010;
+byte a = 17;
+byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
+var signedByte = (sbyte)42;
+var longVariable = (long)42;
+nint a = 1;
+System.IntPtr a = 1;
+
+ref
+https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types
