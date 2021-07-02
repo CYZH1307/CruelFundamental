@@ -1,0 +1,29 @@
+Process
+  a program that has been loaded into memory along with all the resources it needs to operate
+  The OS manages the resources needed to turn your program into a running process.
+  Some essential resources every process needs are 
+      registers(part of CPU, holds data needed by the process), 
+      a program counter / instruction pointer(track of where a computer is in its program sequence), 
+      a stack(a data structure that stores information about the active subroutines of a computer program and is used as scratch space for the process)
+  Each process has a separate memory address space. It cannot directly access shared data in other processes.
+  Switching from one process to another requires some time (relatively) for saving and loading registers, memory maps, and other resources.
+
+Thread
+  A thread is the unit of execution within a process. A process can have multiple threads.
+  Each thread in the process shares that memory and resources.
+  each thread will have its own stack, but all the threads in a process will share the heap.
+  pros: the operational cost of communication between the threads is low.
+  cons: a problem with one thread in a process will certainly affect other threads and the viability of the process itself.
+  
+processes                     vs.     threads
+heavy                                 light
+has its own memory space              use the memory of the process they belong to.
+Inter-process communication is slow   inter-process communication because threads of the same process share memory with the process they belong to.
+expensive context switching           less expensive
+don't share memory with others        share with others in same process
+
+Parallelism: On a system with multiple processors or CPU cores, multiple processes or threads can be executed in parallel. 
+concurrency: On a single processor, it is not possible to have processes or threads truly executing at the same time
+
+ref
+https://www.backblaze.com/blog/whats-the-diff-programs-processes-and-threads/
