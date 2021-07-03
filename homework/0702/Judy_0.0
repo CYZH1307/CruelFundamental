@@ -1,0 +1,36 @@
+String         
+    immutable    
+    String str = "hi";//if the object already exists in the heap, a new object will not be created, 
+                      //and the reference variable will be pointed to the existing object
+                      //the String object is stored in something called the String Pool in Java. It’s located inside the heap memory, 
+                      //and it helps to save a lot of space for Java Runtime even though it takes more time to create the String. 
+    String str = new String("hi");//a new String object will be created each time in the heap memory
+                                  //if the object does not exist in the String Pool, first it will be created in the String pool, and then in the heap memory as well. 
+                                  //The created string object reference always points to the heap area object. 
+                                  //But if it already exists in the String Pool, then only in the heap memory the String object will be created
+    
+    
+StringBuilder
+    mutable
+    StringBuilder class does not provide synchronization, which means instances of StringBuilder class cannot be shared between multiple threads.
+    
+StringBuffer
+    mutable
+    thread-safe and synchronized, which means instances of StringBuffer class can be shared between multiple threads. 
+    
+modifying String is costly as it will created a new string
+String st = "hello";
+s1 = s1 + "world"; //or
+s1 = String.Concat(s1, st);
+
+StringBuilder sb = new StringBuilder("hello");
+sb.Append("world");
+
+//convert from stringBuilder to String
+sb.ToString();
+
+//convert from string to StringBuilder
+StringBuilder sb = new StringBuilder(str);
+
+ref
+https://medium.com/javarevisited/string-stringbuilder-and-stringbuffer-do-you-know-the-difference-6a53429dcf
