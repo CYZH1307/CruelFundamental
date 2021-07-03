@@ -1,7 +1,7 @@
 # Dead Lock
 - https://blog.csdn.net/qq_27068845/article/details/78818381
 - https://www.cnblogs.com/balingybj/p/4782032.html
-- 
+
 ## 造成死锁的原因
 - 资源互斥，同一个资源每次只能被一个线程使用
 - 请求等待，一个线程请求资源等待时，不会释放已经获得的资源
