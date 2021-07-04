@@ -1,0 +1,18 @@
+Dead lock
+Deadlocks are a set of blocked processes each holding a resource and waiting to acquire a resource held by another process.
+
+Necessary Conditions. The deadlock situation can only arise if all the following four conditions hold simultaneously:
+  Mutual Exclusion - atleast one resource should be non-shareable
+  Hold and wait - A process is holding atleast one resource and is waiting for additional resources.
+  NO preemption - Resources cannot be taken from the process because resources can be released only voluntarily by the process holding them.
+  Circular wait - the set of processes are waiting for each other in the circular form.
+  
+Methods For Handling Deadlocks
+  Ignoring the Deadlock - used for  browsing and for normal tasks
+  Deadlock Prevention - violate any one condition among the four
+  Avoiding the Deadlock - used by the operating system in order to check whether the system is in a safe state or in an unsafe state
+  Deadlock detection and recovery - preemption & roll back
+  
+  ref
+  https://www.studytonight.com/operating-system/deadlocks
+  
