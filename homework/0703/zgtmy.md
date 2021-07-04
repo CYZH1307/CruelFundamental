@@ -19,3 +19,5 @@ StringBuilder在初始化的时候使用父类构造方法AbstractStringBuilder(
 字节数组，StringBuilder不是线程安全的，但同时因为没有阻塞机制进行多线程的同步，这个类的性能会快一些，当不是多线程场景下时更推荐这个类。
 这个类实现了Comparable接口的compareTo方法，但是却没有重写父类Object.equals方法，而父类的Object.equals方法是用来判断两个引用是否只想同一个对象实例
 这样会造成两个对象compareto相等内容相等但如果用equals却不相等的不一致情况，所以在使用SortedMap和SortedSet的时候需要注意。
+
+从时间上来看的话String和StringBuffer是从Java 1.0就开始有，而StringBuilder是从1.5开始有的。
