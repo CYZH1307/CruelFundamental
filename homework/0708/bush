@@ -1,0 +1,27 @@
+GC
+1. Basically There are Four Types of GC Roots
+local variables
+active threads
+static variables
+JNI references
+
+2. CMS(Concurrent Mark Sweep) only for OLD Space, use 3-color marking
+CMS has 4 steps
+1> initial mark
+STW and collect all root objects.
+*during CMS, all objects in young space would be treated as GC roots.
+2> concurrent mark
+Concurrenttly mark live objects in old space.
+*Incremental Update
+3> finial remark
+STW and do full marking(root scanning & recursive traversal), because object could be changed in step 2.
+This step would take a long time.
+4> sweep
+Scan the whole old space and reclaim space of unreachable objects
+
+3.G1(Garbage First) for ALL Space, use SATB(Snapshot-At-The-Beginning)
+G1 is targeted for multiprocessors with large memories, and would have a higher throughput compared to CMS.
+The CMS algo could lead to fragmentation, and have to do full GC while there are enough space in old space, which makes GC unpredictable.
+G1 separate the old space into several regions and copy one region to another to cut down the fragmentation.
+
+
