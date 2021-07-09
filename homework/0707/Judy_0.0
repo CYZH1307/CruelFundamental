@@ -1,0 +1,34 @@
+CLustered vs. Non-clustered index
+
+cluseter index
+  one clustered index per table, but can have one clustered index on muti columns
+  primary key automatically become clustered index
+  index contains pointer to block but not direct data
+  table records are physically reordered to match the index(order), sort data on disk
+  Clustered index store pointers to block not data.
+  leaf nodes are actual data itself.
+  sample:
+    Roll_No	Name	Gender	Mob_No
+        3	sudhir	male	9675432890
+        4	afzal	male	9876543210
+        5	zoya	female	8976453201
+
+  
+Non-clustered index
+  the data and non-clustered index are stored seperatly.
+  one table can have nmuti non-clustered index
+  Non-Clustered index store both value and a pointer to actual row that holds data.
+  leaf nodes are not the actual data itself rather they only contains included columns
+  logical order of index does not match physical stored order of the rows on disk.
+  sample:
+    after adding Name as non-clustered index on the table above, a new table is created
+     Name	Row address
+    Afzal	3452
+    Sudhir	5643
+    zoya	9876
+  
+
+  
+
+ref
+https://www.geeksforgeeks.org/difference-between-clustered-and-non-clustered-index/
