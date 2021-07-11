@@ -1,0 +1,15 @@
+Overload vs. Override
+
+Overload
+  When two or more methods in the same class have the same name but different parameters
+  Compile polymorphism
+  An overloaded method may or may not have different return types. But return type alone is not sufficient for the compiler to determine which method is to be executed at run time.  
+  
+Override
+  When the method signature (name and parameters) are the same in the superclass and the child class
+  Runtime Polymorphism
+  
+ref
+https://www.journaldev.com/32182/overriding-vs-overloading-in-java
+https://stackoverflow.com/questions/2807840/is-it-possible-to-have-different-return-types-for-a-overloaded-method
+  
