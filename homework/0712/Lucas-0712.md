@@ -3,6 +3,9 @@
 - https://www.cnblogs.com/cangqinglang/p/13185825.html
 
 ## TCP连接状态
+- CLOSE_WAIT，被动关闭，对方发出关闭信号，或者网络异常，然后本机状态进入CLOSE_WAIT
+- TIME_WAIT，主动关闭，本地主动调用close()，在收到对方结束信号后，进入TIME_WAIT状态
+
 | Action \ Role     | Client                | Server             | Notes |
 |-------------------|-----------------------|--------------------|-------|
 | 3-way handshake   |                       | CLOSED             |       |
