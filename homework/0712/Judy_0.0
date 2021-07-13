@@ -1,0 +1,31 @@
+Linux TCP
+
+TCP: protocol, how connection between two systems is established and maintained 
+    how a message is broken down to be transmitted, and reassemble in a right order in the destination
+IP: protocol, how two systems send package of data to each other, address and route package for delivery
+    each computer on the network checks the IP to determine where to forward the message
+CLOSE_WAIT: a state of TCP connection
+  The remote end has shut down, waiting for the socket to close.
+	compare to TTIME_WAIT: local endpoint has closed the connection
+ 
+Steps to terminate TCP connection between host A and B:
+	1. Fin Wait: A sends FIN packet and waits for respose, release some resources and wait for response
+	2. Close Wait: B release resources and wait for closing application layer
+	3. Last Ack Wait: B sends FIN to A and wait for ack
+	4. Time Wait: A can fully close its job and waits for network collision, sends the final ack
+	5. B receives final ack and kills the connection  
+    
+TCP/IP includes
+  HTTTP: web
+  HTTPs: HTTP secure
+  FTP: file transmission
+has 4 layers
+  Application layer
+  Transport layer
+  Network layer
+  pysical layer
+  
+ref
+https://computingforgeeks.com/how-to-check-tcp-connections-states-in-linux-with-netstat/
+https://searchnetworking.techtarget.com/definition/TCP-IP
+https://accedian.com/blog/close-tcp-sessions-diagnose-disconnections/
