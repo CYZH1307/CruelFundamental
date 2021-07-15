@@ -1,0 +1,30 @@
+Redis
+in-memory data structure, used as DB, cache, messaging middleware
+
+-support data structures
+  string, hash, list, set, ordered set
+-support presistence
+-fast, 
+  in-memory
+  single thread(in-memory so CPU is not bottleneck but the size of memory or network bandwidth)
+    multi instances can be applied to multi core server
+  simple data structure
+  multi-channel I/O multiplexing model
+  different underlying model
+  
+  NIO: 
+    "I can read"
+    record a connection if it is not ready for read
+    read ready, write ready, and a new connection arrives
+  BIO:
+    "I want to read"
+    each thread guards an IO channel, when there is no IO, the thread blocks until an IO event occur
+  AIO:
+    "reading finished"  
+    
+    TBC
+  
+  ref
+  https://www.programmersought.com/article/6825994195/
+  https://www.programmersought.com/article/73524136603/
+  
