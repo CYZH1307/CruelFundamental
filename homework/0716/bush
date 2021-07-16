@@ -1,0 +1,8 @@
+1. CAP
+Consistency: All nodes would get same data at same time when they read.
+Availability: If some nodes in the cluster are down, it wouldn't block the accessibility of the whole cluster.
+Partition Tolerance: Even there are some communication issue between the clusters' nodes, it won't block system's functionality.
+2. distributed system design
+We need to make a trade-off between Consistency and Availability when a network partition or failure happens.
+CP: All nodes could get same data, but when some servers crash, the whole system would be unavailable.
+AP: System keep alive even there are some nodes crashed, but it could need some time to sync up data with all nodes.
