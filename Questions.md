@@ -105,6 +105,8 @@
 ## 0729
 
 ## Pending
+- 针对你熟悉的一门语言，描述数组排序的实现
+- 请描述协程和线程，进程的区别
 
 ## Reference
 - https://mp.weixin.qq.com/s/jzII5_p5KcXxmbLRH1GYRw
