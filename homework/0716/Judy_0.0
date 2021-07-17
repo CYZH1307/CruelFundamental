@@ -1,0 +1,27 @@
+CAP:
+  a distributed system can only have 2 of the 3:
+    consistency, avaliability, and partition tolerance
+    
+  partition tolerance:
+    for intermittent outrage
+    system continue to run despite partial partition malfunctioning(the number of message being delayed by the network between nodes)
+    replica(records, slave nodes become master)
+    
+  High consistency
+    all nodes return the same to ensure system consistency.
+    start transaction(consistent) -> can be inconsistent -> end of transaction(consistent)
+    
+ High availability
+  each request gets a response on success/failure
+  not "service not available"
+  sample: (k8s, master and slaves check blob lease periodically, 
+  if the master release the lease, 
+  slave can obtain it and become the new master,
+  to solve: during the new master initialization time, the system might be down
+  )
+  
+  TBC
+    
+  
+  ref
+  https://towardsdatascience.com/cap-theorem-and-distributed-database-management-systems-5c2be977950e
