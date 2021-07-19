@@ -1,0 +1,18 @@
+Redis storage limits
+
+String, List, Set, Hash, Sorted Set
+  upto  2^32 - 1 elements (4294967295, > 4 billion)
+  each element can be at max 512 MB
+  sorted set takes more memory than set
+  hashes, sets, lists are designed to be encoded in a much more efficient fashion when they are composed of a few elements
+  use hash when possible, e.g., user with name(key1), email(key2), address(key3) -> single hash will all three fields
+  compile with 32bit target < 64bit  
+
+Ref
+https://redis.io/topics/data-types
+https://stackoverflow.com/questions/5606106/what-is-the-maximum-value-size-you-can-store-in-redis
+https://nosql.mypopescu.com/post/1010844204/redis-memory-usage
+reducing memory usage
+https://redis.io/topics/memory-optimization
+https://getstream.io/blog/redis-reducing-memory-usage/
+
