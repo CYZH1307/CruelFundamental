@@ -1,10 +1,10 @@
-#mysql join的底层原理是什么?   
+# mysql join的底层原理是什么?   
 
-##1.嵌套循环连接算法（Nested-Loop Join Algorithm）   
+## 1.嵌套循环连接算法（Nested-Loop Join Algorithm）   
 
 从第一张表读出满足条件的几行数据，并将这些数据每次一行的传给第二张表，第二张表根据第一张表传递过来的数据过滤，得到满足条件的数据再每次一条的传给第三张表，如此往复。   
 
-##2.块嵌套循环连接算法（Block Nested-Loop Join Algorithm）   
+## 2.块嵌套循环连接算法（Block Nested-Loop Join Algorithm）   
 
 这个算法使用了缓存存储外层循环的数据，减少了内层循环的读取次数。     
 
