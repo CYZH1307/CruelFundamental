@@ -1,0 +1,5 @@
+Process: The process is the basic unit of the system for resource allocation and scheduling. A process has waiting, ready, running, blocked and many other states. The OS schedules the processes.
+
+Thread: Also called lightweight process, The smallest unit of program execution flow. Threads execute concurrently. Preemptive. Threads may be interrupted by hardware.
+
+Coroutine: Coroutines are computer program components that generalize subroutines for non-preemptive multitasking, by allowing execution to be suspended and resumed. They are asynchronous and cooperative. User has control over coroutine and the context switches has less conflicts, thus higher efficiency overall. It has great application in crawlers.
