@@ -1,5 +1,40 @@
 # 每日一题
 
+## 0725
+- 请描述协程和线程，进程的区别
+
+## 0726
+- Spring IOC AOP
+
+## 0727
+- MySQL主从原理
+
+## 0728
+- Spring中用到的设计模式
+
+## 0729
+- Kafka
+
+## 0730
+- SpringMVC的启动流程
+
+## 0731
+- Zookeeper的原理
+
+## 0801
+- etcd原理
+
+## Pending
+
+
+## Reference
+- https://mp.weixin.qq.com/s/jzII5_p5KcXxmbLRH1GYRw
+- https://www.nowcoder.com/discuss/688906
+
+
+
+## Done
+
 ## 0621
 - Please describe what happens when you click on a URL in your browser.
 
@@ -101,37 +136,3 @@
 
 ## 0724
 - 针对你熟悉的一门语言，描述数组排序的实现
-
-## 0725
-- 请描述协程和线程，进程的区别
-
-## 0726
-- Spring IOC AOP
-
-## 0727
-- MySQL主从原理
-
-## 0728
-- Spring中用到的设计模式
-
-## 0729
-- Kafka
-
-## 0730
-- SpringMVC的启动流程
-
-## 0731
-- Zookeeper的原理
-
-## 0801
-- etcd原理
-
-## Pending
-
-
-## Reference
-- https://mp.weixin.qq.com/s/jzII5_p5KcXxmbLRH1GYRw
-- https://www.nowcoder.com/discuss/688906
-
-
-
