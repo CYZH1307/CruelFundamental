@@ -13,7 +13,7 @@
 - Spring中用到的设计模式
 
 ## 0729
-- Kafka
+- Kafka的架构
 
 ## 0730
 - SpringMVC的启动流程
