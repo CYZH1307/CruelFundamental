@@ -26,7 +26,6 @@
 
 ## Pending
 分布式共识算法
-HTTPS如何保证安全
 
 ## Reference
 - https://mp.weixin.qq.com/s/jzII5_p5KcXxmbLRH1GYRw
