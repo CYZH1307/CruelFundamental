@@ -1,0 +1,22 @@
+Overload and Overwrite
+1.Overwrite
+Overwrite is a method with same return type and params with its extended parent class or implemented interface.
+2.Overload
+Overload is same method name with different params(types, or number of params).
+It's allowed to have different return type when overload.
+3.could overload have different return types?
+Yes.
+we could refer to below example.
+class A{
+    void method1(int p1, int p2);
+    int method2(int p);
+}
+when you call method in A, jvm would distinguish if you'd like to call method1 or method2 by the params you've passed.
+4.why can't overwrite support different return types?
+During extends/implement, you've actually taken the parents/interfaces' method in the sub calss.
+If you have different return type when overwrite, it would be like below.
+class A{
+    String method(int p);
+    int method(int p);
+}
+same method name, same params, sytem would have no idea wich method you'd like to call.
