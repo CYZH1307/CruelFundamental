@@ -24,6 +24,29 @@
 ## 0801
 - etcd原理
 
+## 0802
+- Java ReentrantLock 原理与使用
+- Python RLock 原理与使用
+
+## 0803
+用自己熟悉的语言创建一个线程池。
+
+## 0804
+Semaphore 的实现原理
+
+## 0805
+并发队列：什么是阻塞队列，什么是非阻塞队列，请分别举例子说明。最好附带上使用场景。
+
+## 0806
+- 介绍一下 Java 中的 ConcurrentLinkedQueue，ArrayBlockingQueue，LinkedBlockingQueue
+## 0807
+- Java: Atomic 的使用场景以及原理
+- C++: std::atomic 的使用方式以及原理。
+
+## 0808
+- Java: 简述乐观锁，悲观锁，公平/非公平锁
+- C++: 简述 lock_guard, 和 unique_lock
+
 ## Pending
 分布式共识算法
 
