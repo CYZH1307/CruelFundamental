@@ -11,7 +11,7 @@ ReentrantLock 还可以衍生出：
 一般来说使用可重入锁可以用一下的代码块
 
 ```java
-Lock l = new ReentrantLock(); 
+     Lock l = new ReentrantLock(); 
      l.lock(); // 加锁
      try {
          // business logic
