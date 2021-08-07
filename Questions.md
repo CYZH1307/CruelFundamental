@@ -47,8 +47,41 @@ Semaphore 的实现原理
 - Java: 简述乐观锁，悲观锁，公平/非公平锁
 - C++: 简述 lock_guard, 和 unique_lock
 
+## 0809
+- Reactor模式的优势
+
+## 0810
+- 消息队列如何避免重复消费
+
+## 0811
+- epoll的实现
+
+## 0812
+- C/C++/Java/GoLang如何分配内存
+
+## 0813
+- Linux mmap原理和优势
+
+## 0814
+- Linux Shared Memory原理和优势
+
+## 0815
+- Redis集群如何保持数据一致
+
+## 0816
+- Redis分布式锁原理
+
+## 0817
+## 0818
+## 0819
+## 0820
+## 0821
+## 0822
+## 0823
+## 0824
+
 ## Pending
-分布式共识算法
+- 分布式共识算法
 
 ## Reference
 - https://mp.weixin.qq.com/s/jzII5_p5KcXxmbLRH1GYRw
