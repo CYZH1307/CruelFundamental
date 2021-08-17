@@ -72,6 +72,8 @@ Semaphore 的实现原理
 - Redis分布式锁原理
 
 ## 0817
+- 描述一种分布式共识算法
+
 ## 0818
 ## 0819
 ## 0820
@@ -81,7 +83,7 @@ Semaphore 的实现原理
 ## 0824
 
 ## Pending
-- 分布式共识算法
+
 
 ## Reference
 - https://mp.weixin.qq.com/s/jzII5_p5KcXxmbLRH1GYRw
