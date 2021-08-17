@@ -84,6 +84,9 @@ Semaphore 的实现原理
 
 ## Pending
 
+- vistor pattern 介绍
+- listener pattern 介绍
+
 
 ## Reference
 - https://mp.weixin.qq.com/s/jzII5_p5KcXxmbLRH1GYRw
