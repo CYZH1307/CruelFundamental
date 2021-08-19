@@ -92,6 +92,9 @@ Semaphore 的实现原理
 
 - vistor pattern 介绍
 - listener pattern 介绍
+- 事务隔离的几个级别
+- 逃逸分析
+- 自旋锁
 
 
 ## Reference
