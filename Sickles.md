@@ -7,6 +7,7 @@
 - deniel_xu_forever
 - pkueecslibo
 - m_tommiyu
+- Summer
 
 ## Left
 - wyzhang421
