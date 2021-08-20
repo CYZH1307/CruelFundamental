@@ -1,72 +1,5 @@
 # 每日一题
 
-## 0725
-- 请描述协程和线程，进程的区别
-
-## 0726
-- Spring IOC AOP
-
-## 0727
-- MySQL主从原理
-
-## 0728
-- Spring中用到的设计模式
-
-## 0729
-- Kafka的架构
-
-## 0730
-- SpringMVC的启动流程
-
-## 0731
-- Zookeeper的原理
-
-## 0801
-- etcd原理
-
-## 0802
-- Java ReentrantLock 原理与使用
-- Python RLock 原理与使用
-
-## 0803
-用自己熟悉的语言创建一个线程池。
-
-## 0804
-Semaphore 的实现原理
-
-## 0805
-并发队列：什么是阻塞队列，什么是非阻塞队列，请分别举例子说明。最好附带上使用场景。
-
-## 0806
-- 介绍一下 Java 中的 ConcurrentLinkedQueue，ArrayBlockingQueue，LinkedBlockingQueue
-## 0807
-- Java: Atomic 的使用场景以及原理
-- C++: std::atomic 的使用方式以及原理。
-
-## 0808
-- Java: 简述乐观锁，悲观锁，公平/非公平锁
-- C++: 简述 lock_guard, 和 unique_lock
-
-## 0809
-- Reactor模式的优势
-
-## 0810
-- 消息队列如何避免重复消费
-
-## 0811
-- epoll的实现
-
-## 0812
-- C/C++/Java/GoLang如何分配内存
-
-## 0813
-- Linux mmap原理和优势
-
-## 0814
-- Linux Shared Memory原理和优势
-
-## 0815
-- Redis集群如何保持数据一致
 
 ## 0816
 - Redis分布式锁原理
@@ -84,18 +17,21 @@ Semaphore 的实现原理
 - K8S 原理
 
 ## 0821
-## 0822
-## 0823
-## 0824
-
-## Pending
-
 - vistor pattern 介绍
+
+## 0822
 - listener pattern 介绍
+
+## 0823
 - 事务隔离的几个级别
+
+## 0824
 - 逃逸分析
+
+## 0825
 - 自旋锁
 
+## Pending
 
 ## Reference
 - https://mp.weixin.qq.com/s/jzII5_p5KcXxmbLRH1GYRw
@@ -206,3 +142,73 @@ Semaphore 的实现原理
 
 ## 0724
 - 针对你熟悉的一门语言，描述数组排序的实现
+
+
+## 0725
+- 请描述协程和线程，进程的区别
+
+## 0726
+- Spring IOC AOP
+
+## 0727
+- MySQL主从原理
+
+## 0728
+- Spring中用到的设计模式
+
+## 0729
+- Kafka的架构
+
+## 0730
+- SpringMVC的启动流程
+
+## 0731
+- Zookeeper的原理
+
+## 0801
+- etcd原理
+
+## 0802
+- Java ReentrantLock 原理与使用
+- Python RLock 原理与使用
+
+## 0803
+用自己熟悉的语言创建一个线程池。
+
+## 0804
+Semaphore 的实现原理
+
+## 0805
+并发队列：什么是阻塞队列，什么是非阻塞队列，请分别举例子说明。最好附带上使用场景。
+
+## 0806
+- 介绍一下 Java 中的 ConcurrentLinkedQueue，ArrayBlockingQueue，LinkedBlockingQueue
+
+## 0807
+- Java: Atomic 的使用场景以及原理
+- C++: std::atomic 的使用方式以及原理。
+
+## 0808
+- Java: 简述乐观锁，悲观锁，公平/非公平锁
+- C++: 简述 lock_guard, 和 unique_lock
+
+## 0809
+- Reactor模式的优势
+
+## 0810
+- 消息队列如何避免重复消费
+
+## 0811
+- epoll的实现
+
+## 0812
+- C/C++/Java/GoLang如何分配内存
+
+## 0813
+- Linux mmap原理和优势
+
+## 0814
+- Linux Shared Memory原理和优势
+
+## 0815
+- Redis集群如何保持数据一致
