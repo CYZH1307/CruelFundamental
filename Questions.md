@@ -32,6 +32,12 @@
 - 自旋锁
 
 ## Pending
+- Linux下动态链接和静态链接的优缺点；
+- C++11“完美转发”的作用，举例说明；
+- 实现C++ std::next_permutation；
+- 实现两线程交替打印
+- 线程joinable/detach区别和实现
+- 策略模式
 
 ## Reference
 - https://mp.weixin.qq.com/s/jzII5_p5KcXxmbLRH1GYRw
