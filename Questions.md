@@ -31,13 +31,25 @@
 ## 0825
 - 自旋锁
 
-## Pending
+## 0826
 - Linux下动态链接和静态链接的优缺点；
+
+## 0827
 - C++11“完美转发”的作用，举例说明；
-- 实现C++ std::next_permutation；
+
+## 0828
 - 实现两线程交替打印
+
+## 0829
+- 实现C++ std::next_permutation；
+
+## 0830
 - 线程joinable/detach区别和实现
+
+## 0831
 - 策略模式
+
+## Pending
 
 ## Reference
 - https://mp.weixin.qq.com/s/jzII5_p5KcXxmbLRH1GYRw
