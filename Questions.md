@@ -1,69 +1,40 @@
 # 每日一题
 
-
-## 0816
-- Redis分布式锁原理
-
-## 0817
-- 描述一种分布式共识算法
-
-## 0818
-- Docker 原理
-
-## 0819
-- 如何解决TCP拥堵
-
-## 0820
-- K8S 原理
-
-## 0821
-- vistor pattern 介绍
-
-## 0822
-- listener pattern 介绍
-
-## 0823
-- 事务隔离的几个级别
-
-## 0824
-- 逃逸分析
-
-## 0825
-- 自旋锁
-
-## 0826
-- Linux下动态链接和静态链接的优缺点；
-
-## 0827
-- C++11“完美转发”的作用，举例说明；
-
-## 0828
-- Redis的一致性算法
-
-## 0829
-- 实现C++ std::next_permutation；
-
-## 0830
-- 线程joinable/detach区别和实现
-
-## 0831
-- 策略模式
-
 ## 0901
 - 你根据什么来决定你的项目用sql还是nosql database?
 
-## Pending
+## 0902
 - 实现两线程交替打印
+
+## 0903
 - 聊聊缓存击穿、缓存穿透、缓存雪奔
 - https://mp.weixin.qq.com/s/RSvsxTJApxbw9PAlxMKXww
+
+## 0904
+- 布隆过滤器是什么？有什么用？
+- https://mp.weixin.qq.com/s/BfAHWsnQkre4iwOuT-DVsA
+
+## 0905
+- ThreadLocal真的会造成内存泄露？
+- https://mp.weixin.qq.com/s/pMu7IGUDFwV0drf-Vwl4Sw
+
+## 0906
+
+## 0907
+
+## 0908
+
+## 0909
+
+## Pending
+
+
 - RocketMQ在面试中那些常见问题及答案
 - https://mp.weixin.qq.com/s/vxHzNs23-P4BvYvyME6_nQ
 - 《大厂面试》之JVM篇21问与答
 - https://mp.weixin.qq.com/s/FT6FHAyebXlqHVbT479c3w
-- 布隆过滤器是什么？有什么用？
-- https://mp.weixin.qq.com/s/BfAHWsnQkre4iwOuT-DVsA
-- ThreadLocal真的会造成内存泄露？
-- https://mp.weixin.qq.com/s/pMu7IGUDFwV0drf-Vwl4Sw
+
+
 
 ## Reference
 - https://mp.weixin.qq.com/s/jzII5_p5KcXxmbLRH1GYRw
@@ -244,3 +215,51 @@ Semaphore 的实现原理
 
 ## 0815
 - Redis集群如何保持数据一致
+
+## 0816
+- Redis分布式锁原理
+
+## 0817
+- 描述一种分布式共识算法
+
+## 0818
+- Docker 原理
+
+## 0819
+- 如何解决TCP拥堵
+
+## 0820
+- K8S 原理
+
+## 0821
+- vistor pattern 介绍
+
+## 0822
+- listener pattern 介绍
+
+## 0823
+- 事务隔离的几个级别
+
+## 0824
+- 逃逸分析
+
+## 0825
+- 自旋锁
+
+## 0826
+- Linux下动态链接和静态链接的优缺点；
+
+## 0827
+- C++11“完美转发”的作用，举例说明；
+
+## 0828
+- Redis的一致性算法
+
+## 0829
+- 实现C++ std::next_permutation；
+
+## 0830
+- 线程joinable/detach区别和实现
+
+## 0831
+- 策略模式
