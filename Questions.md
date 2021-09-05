@@ -19,6 +19,7 @@
 - https://mp.weixin.qq.com/s/pMu7IGUDFwV0drf-Vwl4Sw
 
 ## 0906
+- 讲讲Java中的垃圾回收器是怎么工作的
 
 ## 0907
 
