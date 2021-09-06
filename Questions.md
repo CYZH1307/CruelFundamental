@@ -19,9 +19,10 @@
 - https://mp.weixin.qq.com/s/pMu7IGUDFwV0drf-Vwl4Sw
 
 ## 0906
-- 讲讲Java中的垃圾回收器是怎么工作的
+- RocketMQ,为什么要主动拉取消息而不使用事件监听方式？
 
 ## 0907
+- 讲讲Java中的垃圾回收器是怎么工作的
 
 ## 0908
 
