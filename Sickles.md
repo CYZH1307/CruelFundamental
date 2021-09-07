@@ -1,6 +1,5 @@
 ## Sickles
 - Lucas
-- zgtmy
 - 鸡蛋
 - 之川
 - deniel_xu_forever
@@ -9,8 +8,11 @@
 - Summer
 - Ivan
 - Stev
+- Roy
 
 ## Left
 - wyzhang421
 - Bill0412
 - Tao
+- zgtmy
+
