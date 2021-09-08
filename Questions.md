@@ -25,17 +25,16 @@
 - 讲讲Java中的垃圾回收器是怎么工作的
 
 ## 0908
+- 请你设计一个算法，用来压缩一段URL？
 
 ## 0909
+- 谈一谈，id全局唯一且自增，如何实现？
 
 ## Pending
-
-
 - RocketMQ在面试中那些常见问题及答案
 - https://mp.weixin.qq.com/s/vxHzNs23-P4BvYvyME6_nQ
 - 《大厂面试》之JVM篇21问与答
 - https://mp.weixin.qq.com/s/FT6FHAyebXlqHVbT479c3w
-
 
 
 ## Reference
