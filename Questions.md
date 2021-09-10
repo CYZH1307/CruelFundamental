@@ -30,6 +30,16 @@
 ## 0909
 - 谈一谈，id全局唯一且自增，如何实现？
 
+## 0910
+- 如果服务器的很多个端口处于close wait是什么情况 还问了epoll触发机制有哪些
+
+## 0911
+- TODO
+
+## 0912
+close wait 就是服务器端还有数据给客户端发 但是服务器端不会再发送数据给客户端？ epoll就 et和lt两种是吗
+
+
 ## Pending
 - RocketMQ在面试中那些常见问题及答案
 - https://mp.weixin.qq.com/s/vxHzNs23-P4BvYvyME6_nQ
