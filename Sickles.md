@@ -4,10 +4,10 @@
 - 之川
 - deniel_xu_forever
 - m_tommiyu
-- Summer
-- Ivan
 - Stev
 - Roy
+- YolkC
+- wfnuser
 
 ## Left
 - wyzhang421
@@ -15,5 +15,7 @@
 - Tao
 - zgtmy
 - pkueecslibo
+- Summer
+- Ivan
 
 
