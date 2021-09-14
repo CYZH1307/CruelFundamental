@@ -1,5 +1,5 @@
 # inode #
-inode stores the metadata for block, which is the basic unit of most file systems. The metadata includes the size, timestamp, location, permission and link information.  
+inode stores the metadata for block, which is the basic storage unit of mainstream file systems. The metadata includes the size, timestamp, location, permission and link information.  
 Each file has its own 'inode-number'. When reading or writing on a file, the system firstly get the 'inode-number' via the filename. 
 Then it discovers the location of the file using the metadata in the inode.
 In other words, inode is the index for block. 
