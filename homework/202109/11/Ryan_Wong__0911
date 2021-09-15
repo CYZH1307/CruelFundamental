@@ -1,0 +1,41 @@
+C++内置方法从vector构建堆（以vector<int> a为例）
+
+用到接口：
+make_heap(a.begin(), a.end(), lambda): 本地将a变为堆，lambda决定排序方向，建立最小堆使用greater<int>()。
+pop_heap(a.begin(), a.end(), lambda)：将堆顶推到vector最后（待删除），将新的堆顶推到vector最前。
+push_heap(a.begin(), a.end(), lambda)：vector有插入动作之后，用该方法将vector重新组织成堆。
+
+使用示例1，make_heap:
+int main() {
+    vector<int> nums={6, 9, 2, 4, 7, 0, 1, 8, 3, 5};
+    make_heap(nums.begin(), nums.end(), greater<int>());
+    for (auto x : nums) {
+        cout<<x<<", ";
+    }
+    return 0;
+}
+
+输出为：
+0, 3, 1, 4, 5, 2, 6, 8, 9, 7, 
+
+反序列化为：
+         0
+        /  \
+     3       1
+   /   \    /  \
+  4    5   2    6
+ /  \  /
+8   9  7
+
+使用示例2，在示例1的基础上使用pop_heap:
+输出为:
+1, 3, 2, 4, 5, 7, 6, 8, 9, 0, 
+
+0已经是废弃节点等待删除，剩余节点反序列化为：
+         1
+        /  \
+     3       2
+   /   \    /  \
+  4    5   7    6
+ /  \  
+8   9  
