@@ -49,25 +49,38 @@
 - Linux 读写数据的整个流程，内核状态切换；Mmap(内存映射)和sendFile函数零拷贝什么原理？
 
 ## 0916
-- 一道SQL语句题目（具体忘了），有多个SQL语句模拟ID分发器的业务，判断在默认隔离级别下会不会存在并发上的问题（实际上考察的是innodb的多版本并发控制机制）
+- 为什么gRPC使用HTTP2传输？
+- https://github.com/refinedcoding/CruelFundamental/blob/main/blogs/gRPC%E7%B3%BB%E5%88%97(%E4%B8%89)%20%E5%A6%82%E4%BD%95%E5%80%9F%E5%8A%A9HTTP2%E5%AE%9E%E7%8E%B0%E4%BC%A0%E8%BE%93%20-%20%E7%9F%A5%E4%B9%8E.pdf
 
 ## 0917
-- Linux是内存管理是怎么样的？虚存是什么，虚拟地址->物理地址的整个流程是什么？
+- 简述RedLock多节点分布式锁算法
 
 ## 0918
-- 一道SQL语句题目，好像是一个update语句和一个select for update，然后判断是否有问题（实际上就是考察gap lock），建议看极客时间有个比较出名的Mysql36讲。
+- 简述如何设计延时队列
+- https://github.com/refinedcoding/CruelFundamental/blob/main/blogs/%E4%B8%80%E5%8F%A3%E6%B0%94%E8%AF%B4%E5%87%BA%206%E7%A7%8D%20%E5%BB%B6%E6%97%B6%E9%98%9F%E5%88%97%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95%EF%BC%8C%E9%9D%A2%E8%AF%95%E5%AE%98%E4%B9%9F%E5%BE%97%E6%9C%8D.pdf
 
 ## 0919
-- Linux说一说fork这个函数，返回什么；父子进程之间资源是共享的的吗？父子进程之间怎么用匿名管道通信？
+- Kafka如何保证消息有序不丢？
+- https://github.com/refinedcoding/CruelFundamental/blob/main/blogs/%E5%88%A8%E6%A0%B9%E9%97%AE%E5%BA%95%EF%BC%8CKafka%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%88%B0%E5%BA%95%E4%BC%9A%E4%B8%8D%E4%BC%9A%E4%B8%A2%E6%B6%88%E6%81%AF.pdf
 
 ## 0920
-- 数据库隔离级别，Mysql怎么去实现的
+- Redis 为什么这么快
+- https://github.com/refinedcoding/CruelFundamental/blob/main/blogs/%E5%A4%A7%E5%8E%82%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9ARedis%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E4%B9%88%E5%BF%AB%EF%BC%9F.pdf
 
 ## 0921
-- 父进程死掉子进程会怎么样？子进程挂掉父进程呢？知道僵尸进程吗，Linux会怎么处理？
+- K8S 为何舍弃 Docker
 
+## 0922
+- Kafka 为何舍弃 ZooKeeper
 
 ## Pending
+- 父进程死掉子进程会怎么样？子进程挂掉父进程呢？知道僵尸进程吗，Linux会怎么处理？
+- 数据库隔离级别，Mysql怎么去实现的
+- Linux说一说fork这个函数，返回什么；父子进程之间资源是共享的的吗？父子进程之间怎么用匿名管道通信？
+- 一道SQL语句题目，好像是一个update语句和一个select for update，然后判断是否有问题（实际上就是考察gap lock），建议看极客时间有个比较出名的Mysql36讲。
+- Linux是内存管理是怎么样的？虚存是什么，虚拟地址->物理地址的整个流程是什么？
+- 一道SQL语句题目（具体忘了），有多个SQL语句模拟ID分发器的业务，判断在默认隔离级别下会不会存在并发上的问题（实际上考察的是innodb的多版本并发控制机制）
+
 - RocketMQ在面试中那些常见问题及答案
 - https://mp.weixin.qq.com/s/vxHzNs23-P4BvYvyME6_nQ
 - 《大厂面试》之JVM篇21问与答
