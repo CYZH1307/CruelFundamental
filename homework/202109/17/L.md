@@ -11,7 +11,7 @@
 
 3.Liveness property B: Fault tolerance. 
 
-## redis单实例中实现分布式锁的正确方式（原子性非常重要）:
+## redis实例中实现分布式锁:
 
 Assume N个Redis master，we need to assume that we use the same method to acquire and set locks on N instances as well as one instance.
 
