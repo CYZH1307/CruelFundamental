@@ -1,8 +1,8 @@
 # RedLock brief #
 The naive key of Redis is efficient but gets a bug in the master-slave switch scene:  
-1.The master-node got the lock;  
-2.The master-node coredumps before the lock is synced to the slave-node;  
-3.The slave-node is promoted to master and loses the lock.  
+Step One.The master-node got the lock;  
+Step Two.The master-node coredumps before the lock is synced to the slave-node;  
+Step Three.The slave-node is promoted to master and loses the lock.  
   
  When applying RedLock, the client and different nodes in the distributed server system(N sized) shared a same lock-ID(ID) and a same lock-expired-time(ET). 
  For each server system, only one client is allowed to hold the lock in a time.
