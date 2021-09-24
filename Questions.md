@@ -57,15 +57,12 @@
 
 ## 0918
 - 简述如何设计延时队列
-- https://github.com/refinedcoding/CruelFundamental/blob/main/blogs/%E4%B8%80%E5%8F%A3%E6%B0%94%E8%AF%B4%E5%87%BA%206%E7%A7%8D%20%E5%BB%B6%E6%97%B6%E9%98%9F%E5%88%97%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95%EF%BC%8C%E9%9D%A2%E8%AF%95%E5%AE%98%E4%B9%9F%E5%BE%97%E6%9C%8D.pdf
 
 ## 0919
 - Kafka如何保证消息有序不丢？
-- https://github.com/refinedcoding/CruelFundamental/blob/main/blogs/%E5%88%A8%E6%A0%B9%E9%97%AE%E5%BA%95%EF%BC%8CKafka%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%88%B0%E5%BA%95%E4%BC%9A%E4%B8%8D%E4%BC%9A%E4%B8%A2%E6%B6%88%E6%81%AF.pdf
 
 ## 0920
 - Redis 为什么这么快
-- https://github.com/refinedcoding/CruelFundamental/blob/main/blogs/%E5%A4%A7%E5%8E%82%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9ARedis%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E4%B9%88%E5%BF%AB%EF%BC%9F.pdf
 
 ## 0921
 - K8S 为何舍弃 Docker
@@ -80,9 +77,10 @@
 - Raft figure8。为什么Leader不能直接commit前一个任期留下了的log？如果这样做会出现什么问题？
 
 ## 0925
-- 一个程序从加载到运行，中间发生了什么？
+- 两阶段提交和两阶段事务有何联系和区别？
 
 ## 0926
+- 一个程序从加载到运行，中间发生了什么？
 
 ## 0927
 
