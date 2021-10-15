@@ -8,7 +8,7 @@
     ii.链表节点内部性质：每个版本都有trx_id（事务提交的时间戳，相当于版本序号）和roll pointer（相当于链表的next）。
   
     iii.事务对版本的可见性：每个事务都会在执行时生成一个Read View，里面含有当前未提交的事务id列表list = {min_id, ..., max_id}。  
-  若某个链表节点的trx_id < min_id，则必然可见；  
-  若某个链表节点的trx_id > max_id，则必然不可见；
-  若某个链表节点的trx_id ∈ [min_id, max_id]且trx_id ∉ list，可见；  
-  若某个链表节点的trx_id ∈ [min_id, max_id]且trx_id ∈ list，则视乎该节点的数据是否事务本身修改的，是则可见，否则不可见；
+     若某个链表节点的trx_id < min_id，则必然可见；  
+     若某个链表节点的trx_id > max_id，则必然不可见；
+     若某个链表节点的trx_id ∈ [min_id, max_id]且trx_id ∉ list，可见；  
+     若某个链表节点的trx_id ∈ [min_id, max_id]且trx_id ∈ list，则视乎该节点的数据是否事务本身修改的，是则可见，否则不可见；
