@@ -1,0 +1,11 @@
+# main 函数原理
+- https://mp.weixin.qq.com/s/QS2Ah35SilLpoodbFFjqIg
+- PEID 工具查看 VC8 编译的程序
+- Entrypoint： 00011078，相对虚拟地址，RVA
+- OllyDbg 中，内存映射可以看到 PE 程序的物理地址？
+- 程序第一条制定位于 0x00400000 + 0x00011078 = 0x00411078
+- 是一条 JMP 命令
+- Windows 核心编程，先调用 __security_init_cookie()
+- 点击运行 exe 程序，建立进程地址空间
+- 程序用过 JMP 命令，执行四个启动函数
+- 然后调用 _tmainCRTStartup
