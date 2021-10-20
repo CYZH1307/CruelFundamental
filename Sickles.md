@@ -1,13 +1,11 @@
 ## Sickles
 - Lucas
 - 鸡蛋
-- 之川
 - m_tommiyu
 - Roy
 - YolkC
 - wfnuser
-- masiyang1616, 0914
-
+- x-wqs, 1019
 ## Left
 - wyzhang421
 - Bill0412
@@ -18,5 +16,6 @@
 - Ivan
 - deniel_xu_forever
 - Stev
-
+- 之川
+- masiyang1616, 0914
 
