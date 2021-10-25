@@ -1,0 +1,2 @@
+Q：java异常分类
+A：所有错误和异常的父类为Throwable，进一步可分为Error和Exception。Exception可分为运行时异常RuntimeException和受检异常CheckedException。编译器要求受检异常必须进行处理，对这段程序进行try-catch，或者throws语句声明抛出。运行时异常出现时，不要求强制处理。
