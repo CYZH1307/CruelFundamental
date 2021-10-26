@@ -1,0 +1,28 @@
+Q: cpp异常
+A: 
+try {
+
+} catch(exceptionType1 e) {
+
+} catch(exceptionType2 e) {
+
+} catch(exceptionTypen e) {
+
+}
+会在运行时将产生的错误和exceptionType进行类型匹配,如果直到最后都没匹配上,会调用系统函数terminate()终止程序
+编译器根据异常抛出复制构造异常对象,故异常不能是不完全类型(声明但未定义),构造函数和析构函数不能是私有的
+
+异常类:
+exception
+runtime_error
+range_error
+overflow_error
+underflow_error
+logic_error
+domain_error
+invalid_argument
+length_error
+out_of_range
+bad_alloc
+bad_cast
+
