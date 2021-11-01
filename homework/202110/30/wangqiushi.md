@@ -1,0 +1,7 @@
+Log4j：Log for java. Apache开源项目。主要由Loggers日志记录器、Appenders输出控制器和Layout日志格式化器组成。
+
+1日志记录器负责处理日志记录，记录日志定义日志级别。DEBUG<INFO<WARN<ERROR级别是分大小的，输出级别不低于设定级别的日志信息。
+
+2Log4j日志系统允许把日志输出到不同地方，如控制台ConsoleAppender、文件FileAppender、根据天数产生新文件DailyRollingFileAppender、根据文件大小产生新文件RollingFileAppender(增强可维护性、可读性)、保存到数据库JDBCAppender。
+
+3提供4种日志输出样式，根据HTML样式、自由指定样式、包含日志级别与信息的样式和包含日志时间、线程、类别等信息样式。常用：HTMLLayout、SimpleLayout、自定义格式化PatternLayout
