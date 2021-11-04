@@ -57,88 +57,88 @@
 - es如何保持数据一致性
 
 ## 1122
-- springcloud与dubbo对比
+- Spring Cloud与Dubbo对比
 
 ## 1123
-- mysql索引优化方法、步骤
+- 简述MySQL索引优化方法、步骤
 
 ## 1124
-- mysql隔离级别
+- 简述MySQL隔离级别
 
 ## 1125
-- mq对比分析，要求可靠性、高吞吐用哪个mq
+- MQ对比分析
 
 ## 1126
-- redis数据类型和分布式锁
+- 简述redis数据类型和分布式锁
 
 ## 1127
-- redis扛不住怎么办，不允许限流降级
+- 简述redis扛不住怎么办，不允许限流降级
 
 ## 1128
-- G1回收流程，G1适合的场景
+- 简述G1回收流程及G1适用场景
 
 ## 1129
-- 线程池原理
+- 简述线程池原理
 
 ## 1130
-- spring aop原理
+- 简述spring aop原理
 
 ## 1201
-- 解决mysql数据库锁表问题
+- 如何解决mysql数据库锁表问题
 
 ## 1202
-- java syncronized 原理
+- 简述java syncronized 原理
 
 ## 1203
-- volatile功能和底层实现原理
+- 简述volatile功能和底层实现原理
 
 ## 1204
-- spring ioc原理
+- 简述spring ioc原理
 
 ## 1205
-- spring中设计模式
+- 简述spring中设计模式
 
 ## 1206
 - 创建单例模式进行双重锁定的原因
 
 ## 1207
-- jvm组成
+- 简述jvm组成
 
 ## 1208
 - 简述垃圾收集器
 
 ## 1209
-- String StringBuilder StringBuffer异同点
+- 简述String StringBuilder StringBuffer异同点
 
 ## 1210
-- 创建对象多如何调整JVM参数
+- 简述创建对象多如何调整JVM参数
 
 ## 1211
-- mybatis原理
+- 简述mybatis原理
 
 ## 1212
-- rabbitmq/kafka 如何保证可靠消息
+- 简述rabbitmq/kafka如何保证可靠消息
 
 ## 1213
 - 简述内存泄漏
 
 ## 1214
-- 静态方法能覆盖吗
+- 简述静态方法能否覆盖及原因
 
 ## 1215
-- 简述gap lock
+- 简述Gap Lock
 
 ## 1216
-- https原理
+- 简述Https原理
 
 ## 1217
-- eureka原理
+- 简述Eureka原理
 
 ## 1218
-- 分布式事务解决方案
+- 简述分布式事务解决方案
 
 ## 1219
-- springboot内存占用优化
+- 简述SpringBoot内存占用及如何优化
 
 
 ## Pending
