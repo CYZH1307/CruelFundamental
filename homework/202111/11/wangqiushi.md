@@ -1,0 +1,5 @@
+HDFS：采用Master/Slave结构。Namenode对系统空间进行管理，DataNode用于保存文件数据。存储文件时，会把文件划分为多个数据块，同时复制形成副本，保存在不同的DataNode上。Datanode按照设定时间给Namenode发送信息，判定Datanode的健康状况和数据一致性。用户读取数据时，首先向NameNode节点发送读取请求，获取DataNode相关信息，然后就近从DataNode获取数据。
+
+MapReduce：将计算任务划分成多个单独执行的Map任务，分配到多台机器上执行，生成中间结果。通过reduce将多个中间结果合并处理，输出最终结果。通过map（）和reduce（）函数实现。
+
+Yarn：用于分布式计算资源分配，由计算资源管理器、计算节点管理器、应用程序管理器以及计算资源容器等构成。将资源和计算分成两部分，利用ResourceManager和ApplicationMaster两个进程管理。RM控制集群资源分配，用户提交应用程序后，AM启动，向RM申请资源，并将任务分配给空闲的NM上，NM负责任务启动。
