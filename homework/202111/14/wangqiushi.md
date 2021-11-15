@@ -1,4 +1,6 @@
 Yarn原理
+
+
 ResourceManager：资源统一调度、管理。处理客户端请求，启动ApplicationMaster，监控NodeManager健康情况。
 NodeManager：负责节点资源管理使用，处理RM命令，协助AM处理任务，向RM汇报节点资源情况，管理Container。
 Container：封装节点的运行资源，内存、cpu等。容器中运行Map或Reduce任务。
