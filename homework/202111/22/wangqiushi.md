@@ -5,4 +5,4 @@
 
 -社区活跃度与更新力度：Spring Cloud活跃度要高于Dubbo 活跃度。Dubbo：由于新的需求，需要开发者自行升级，中小公司没有能力修改Dubbo 源码+周边的一整套解决方案，也没有在真实线上生产环境测试过，对于中小公司不太适用。Spring Cloud 更新非常快。
 
--Dubbo的定位是一款RPC框架，Spring Cloud是微服务架构下一站式解决方案。面临微服务基础框架选型Dubbo与SpringCloud只能二选一，Dubbo之后会积极寻求适配到Spring Cloud 生态。
+-Dubbo的定位是一款RPC框架，Spring Cloud是微服务架构下一站式解决方案。面临微服务基础框架选型Dubbo与SpringCloud只能二选一。Dubbo之后会积极寻求适配到Spring Cloud 生态。
