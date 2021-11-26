@@ -1,5 +1,5 @@
 
-# 0713 - RabbitMQ, Kafka, RocketMQ, ActiveMQ, 以及其他消息中间件
+# RabbitMQ, Kafka, RocketMQ, ActiveMQ, 以及其他消息中间件
 - https://developer.aliyun.com/article/216084
 - https://segmentfault.com/a/1190000019547121
 - TODO: https://blog.csdn.net/qq_28959087/article/details/111290204
