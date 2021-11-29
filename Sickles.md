@@ -1,11 +1,9 @@
 ## Sickles
 - Lucas
-- 鸡蛋
 - m_tommiyu
 - Roy
 - YolkC
-- wfnuser
-- x-wqs, 1019
+- x-wqs
 - hzkzhz
 ## Left
 - wyzhang421
@@ -30,3 +28,5 @@
 - skd782444 / SKD
 - FFF960325 / bush
 - zhuoerh / Judy_0.0
+- 鸡蛋
+- wfnuser
