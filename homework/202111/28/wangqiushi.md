@@ -23,7 +23,7 @@ Fully young GC
 • Process RS
 • Object Copy
 • Reference Processing
-- G1记录每个阶段的时间，⽤于⾃动调优
+• G1记录每个阶段的时间，⽤于⾃动调优
 • 记录Eden/Survivor的数量和GC时间
 • 根据暂停⽬标⾃动调整Region的数量
 • 暂停⽬标越短，Eden数量越少
