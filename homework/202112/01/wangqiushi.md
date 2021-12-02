@@ -54,4 +54,5 @@
 
 外中断则是由于系统中某事件引起的，与现行指令无关。
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/58d4dc07-10e7-41a6-bd1d-3e6a11825c3e/Untitled.png)
+![image](https://user-images.githubusercontent.com/80054116/144350814-a71fc50c-f86a-4128-bdab-d21c6529f006.png)
+
