@@ -1,10 +1,11 @@
-## Sickles
-- Lucas
-- m_tommiyu
+## 6 Sickles
 - Roy
 - YolkC
 - x-wqs
 - hzkzhz
+- Monsooooon
+- CYZH1307 
+
 ## Left
 - wyzhang421
 - Bill0412
@@ -30,3 +31,5 @@
 - zhuoerh / Judy_0.0
 - 鸡蛋
 - wfnuser
+- m_tommiyu
+- Lucas
