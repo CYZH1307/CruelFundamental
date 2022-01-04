@@ -1,10 +1,11 @@
-## 6 Sickles
+## 7 Sickles
 - Roy
 - YolkC
 - x-wqs
 - hzkzhz
 - Monsooooon
 - CYZH1307 
+- zrt
 
 ## Left
 - wyzhang421
