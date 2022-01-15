@@ -8,6 +8,7 @@
 
 # 请求头部 #
 包含若干个客户端属性，用“propName:propValue”的格式区分，让服务端解析。包括但不限于：
+
         1.Accept：告诉服务器能够发送哪些媒体类型
         2.Accept-Charset：告诉服务器能够发送哪些字符集
         3.Accept-Encoding：告诉服务器能够发送哪些编码方式
