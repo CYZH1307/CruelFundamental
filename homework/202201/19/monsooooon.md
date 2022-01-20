@@ -1,4 +1,4 @@
-https://segmentfault.com/a/1190000037683781
+https://segmentfault.com/a/1190000037683781  
 https://dev.mysql.com/doc/refman/8.0/en/mysql-indexes.html
 
 按数据结构分类可分为：B+tree索引、Hash索引、Full-text索引。
