@@ -1,5 +1,6 @@
 # 简述Redis对象类型
 Redis共有五种基础对象：
+    
     1.REDIS_STRING：字符串
     2.REDIS_LIST：列表
     3.REDIS_HASH：哈希
@@ -7,6 +8,7 @@ Redis共有五种基础对象：
     5.REDIS_ZSET：有序集合
     
 对应的底层实现有8种：
+    
     a.REDIS_ENCODING_INT：long类型的整数
     b.REDIS_ENCODING_EMBSTR：embstr类型的动态字符串
     c.REDIS_ENCODING_RAW：动态字符串
