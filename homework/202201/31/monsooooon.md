@@ -1,3 +1,5 @@
+ref https://redis.io/topics/data-types-intro
+
 - Binary-safe strings.
 - Lists: collections of string elements sorted according to the order of insertion. They are basically linked lists.
 - Sets: collections of unique, unsorted string elements.
