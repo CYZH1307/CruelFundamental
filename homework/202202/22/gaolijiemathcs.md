@@ -36,6 +36,8 @@ StringBuffer，每次对StringBuffer对象操作，不生成新的对象或改�
 
 
 
+ref:
+
 https://blog.csdn.net/kingzone_2008/article/details/9220691
 
 https://www.runoob.com/java/java-stringbuffer.html
