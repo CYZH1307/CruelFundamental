@@ -6,11 +6,89 @@
 
 静态多态中，每个类各自实现同名函数的定义，函数内部逻辑之间可以没有任何关系，只需要声明相同接口并使用模板：
 
-![1646192622965](C:\Users\h00465565\AppData\Local\Temp\1646192622965.png)
+```c++
+namespace StaticPoly
+{
+    class Line
+    {
+    public:
+        void Draw()const{    std::cout << "Line Draw()\n";    }
+    };
+
+    class Circle
+    {
+    public:
+        void Draw(const char* name=NULL)const{    std::cout << "Circle Draw()\n";    }
+    };
+
+    class Rectangle
+    {
+    public:
+        void Draw(int i = 0)const{    std::cout << "Rectangle Draw()\n";    }
+    };
+
+    template<typename Geometry>
+    void DrawGeometry(const Geometry& geo)
+    {
+        geo.Draw();
+    }
+
+    template<typename Geometry>
+    void DrawGeometry(std::vector<Geometry> vecGeo)
+    {
+        const size_t size = vecGeo.size();
+        for(size_t i = 0; i < size; ++i)
+            vecGeo[i].Draw();
+    }
+}
+
+```
 
 动态多态中，需要一个父类实现虚的基函数，然后各个子类继承该函数并做相应重写。
 
-![1646192659022](C:\Users\h00465565\AppData\Local\Temp\1646192659022.png)
+```c++
+namespace DynamicPoly
+{
+    class Geometry
+    {
+    public:
+        virtual void Draw()const = 0;
+    }; // 需要一个抽象的父类
+
+    class Line : public Geometry
+    {
+    public:
+        virtual void Draw()const{    std::cout << "Line Draw()\n";    }
+    };
+
+    class Circle : public Geometry
+    {
+    public:
+        virtual void Draw()const{    std::cout << "Circle Draw()\n";    }
+    };
+
+    class Rectangle : public Geometry
+    {
+    public:
+        virtual void Draw()const{    std::cout << "Rectangle Draw()\n";    }
+    };
+
+    void DrawGeometry(const Geometry *geo)
+    {
+        geo->Draw();
+    }
+
+    //动态多态最吸引人之处在于处理异质对象集合的能力
+    void DrawGeometry(std::vector<DynamicPoly::Geometry*> vecGeo)
+    {
+        const size_t size = vecGeo.size();
+        for(size_t i = 0; i < size; ++i)
+            vecGeo[i]->Draw();
+    }
+}
+```
+
+
 
 ## 2.多态实现的阶段：
 
