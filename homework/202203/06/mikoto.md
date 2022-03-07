@@ -2,23 +2,15 @@
 
 ### mutex的实现
 
-C++中，标准库的std::mutex是pthread_mutex_t的一个封装
-
-```
-class mutex {
-    pthread_mutex_t _M_mutex;
-public:
-    mutex() { _M_mutex = PTHREAD_MUTEX_INITIALIZER; }
-    ~mutex() { pthread_mutex_destroy(&_M_mutex); }
-    void lock() { pthread_mutex_lock(&_M_mutex); }
-    bool try_lock() { return pthread_mutex_trylock(&_M_mutex) == 0; }
-    void unlock() { pthread_mutex_unlock(&_M_mutex); }
-}
-```
-
 锁的本质是一块内存空间，这块空间被赋值为1的时候表示加锁，赋值为0时表示解锁。多线程抢占锁资源实际上是抢占这块内存的赋值权。保证一次只有有一个线程成功抢占到锁，实际上需要硬件上的设计保证。
 
-CPU提供一些用来构建锁的atomic指令，完成atomic的compare-and-swap（CAS），用这样的硬件指令可以实现spin lock(自旋锁)
+CPU提供一些用来构建锁的atomic指令，完成atomic的compare-and-swap（CAS），用这样的硬件指令可以实现spin lock(自旋锁), spin lock即让没有抢到锁的线程不断在while循环中进行compare-and-swap，直至先前抢占到锁的线程释放锁后当前线程抢占到锁。 spin lock需要消耗一定的系统资源，因此若等待时间较长，程序可以申请被挂起，此时CPU可以执行其它任务，等到持有锁的线程释放锁后通知该线程。线程切换也需要消耗资源，若需要等待较长时间，则适合挂起切换线程，否则适合乐观自旋。
+
+线程向操作系统请求挂起是通过一个系统调用，宏观来说，OS需要一个全局数据来局里一个被挂起线程和对应锁的映射关系，这样的数据结构本身也需要锁来维护，因为可能同时有多个线程操作。
+**实现高效的锁本身也需要锁** 好在通常访问该数据结构消耗较少，可以通过比如一个spin lock来加锁维护。
 
 ### mutex的局限性
+
+- 锁产生一定的性能损失
+- 持有锁的线程未正确释放锁，则可能造成死锁
 
