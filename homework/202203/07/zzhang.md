@@ -14,8 +14,8 @@
 如果A class里面有一个member是B class的instance，A class 从class D derived得到，在创建A的instance的时候，initialization的顺序是怎样的。
 
 - class D
-- class A
 - class B
+- class A
 
 
 
