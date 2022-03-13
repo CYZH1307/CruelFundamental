@@ -1,64 +1,5 @@
 # 每日一题
 
-## 2022/02/12
-- 介绍一下单例模式的含义及使用场景
-
-## 2022/02/13
-- 介绍一下单例模式的多线程安全问题
-
-## 2022/02/14
-- 如何保证单例模式只有唯一实例？你知道的都有哪些方法？
-
-## 2022/02/15
-- 介绍一下观察者模式的含义及使用场景
-
-## 2022/02/16
-- 介绍一下装饰器模式的含义及使用场景
-
-## 2022/02/17
-- 介绍一下工厂模式的含义及使用场景
-
-## 2022/02/18
-- 请你说一说OOP的设计模式的五项原则
-
-## 2022/02/19
-- CPU分几级缓存，大小一般是多少。访问各级缓存需要的时间，需要多少CPU cycle的数量级。
-
-## 2022/02/20
-- C++: C++ 动态库、静态库的区别
-- Python: Python数据类型有哪些。简述 List 和 Tuple 的区别。
-- Java: 访问修饰符public,private,protected,以及不写（默认）时的区别？
-
-## 2022/02/21
-- 什么是五级流水线，数据冒险是什么
-
-## 2022/02/22
-- C++: volatile 和 atomic 的区别
-- Python: 什么是鸭子类型
-- Java: String和StringBuilder、StringBuffer的区别？
-
-## 2022/02/23
-- 从内存里读一个byte计算机内部是怎么样实现的
-
-## 2022/02/24
-- C++: 简述 virtual function
-- Python: LEGB rule
-- Java: 重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？
-
-## 2022/02/25
-- a、b两台服务器怎么判断是否能连通，为什么能用ping和traceroute
-
-## 2022/02/26
-- traceroute是怎么traceback最终让发出traceroute的客户端得到信息的
-
-## 2022/02/27
-- C++: 简述 vtable
-- Python: Python 2 和 Python 3 对比
-- Java: 描述一下JVM加载class文件的原理机制
-
-## 2022/02/28
-- hashmap和treemap的区别，除了红黑树还可以怎么实现treemap
-
 ## 2022/03/01
 - C++: static polymorphism 和 dynamic polymorphism 的区别
 - Python: 区别 `*args` 和 `**kwargs`
@@ -113,19 +54,85 @@
 - Java: TreeMap和TreeSet在排序时如何比较元素？Collections工具类中的sort()方法如何比较元素？
 
 ## 2022/03/14
+- cmake和makefile的区别, 简述cmake到可执行文件的过程
 
 ## 2022/03/15
+- 4G内存怎么读取一个5G的数据
 
 ## 2022/03/16
+- C++: 如何实现heap-only class，如何实现stack-only class
+- Python: Python中有日志吗，怎么使用
+- Java: 反射机制优缺点和应用场景
 
 ## 2022/03/17
+- 2G物理内存，new一个3G的数组时发生什么？
 
 ## 2022/03/18
+- 你知道的中间件有哪些？
 
 ## 2022/03/19
+- C++: 指针和引用的差别
+- Python: Python是如何进行类型转换的
+- Java: 什么是序列化?什么是反序列化?
 
 ## 2022/03/20
+- 如果把访问次数过多的IP拉入黑名单，怎么实现，用什么数据结构
 
+## 2022/03/21
+- C++: C++中struct和class区别，C语言struct和C++struct区别
+- Python: os.path 和 sys.path 的区别
+- Java: Java 序列化中如果有些字段不想进行序列化，怎么办
+
+## 2022/03/22
+- B树和B+树的区别，B+树应用在哪?
+
+## 2022/03/23
+- C++: 讲一讲 std::move 和 std::forward （Effective Modern C++）
+- Python: 常用的字符串格式化有哪几种
+- Java: Java 中 IO 流分为几种?
+
+## 2022/03/24
+- Linux下怎么快速知道文档总共有多少行: 命令行, C API 或者别的自己用的语言的API
+
+## 2022/03/25
+- C++: 为什么优先选用别名声明，而非typedef？（Effective Modern C++）
+- Python: python里import一个package之后是怎么找到这个package的，怎么调用的
+- Java: 既然有了字节流,为什么还要有字符流?
+
+## 2022/03/26
+-  Docker: docker解决什么问题
+
+## 2022/03/27
+- C++: 什么是noexcept?（Effective Modern C++）
+- Python: 在python里shallow copy和deep copy的差别?
+- Java: 为什么 Java 中只有值传递？
+
+## 2022/03/28
+- Docker: container 和 image 的区别，如何创建一个image
+
+## 2022/03/29
+- C++: 什么是constexpr？（Effective Modern C++）
+- Python: 闭包是什么？
+- Java: 说说 sleep() 方法和 wait() 方法区别和共同点?
+
+## 2022/03/30
+- TCP可以限速吗？
+
+## 2022/03/31
+- C++: 为什么建议优先选用const_iterator 而非iterator？（Effective Modern C++）
+- Python: Python中调用C++代码的方法有哪些？
+- Java: 为什么我们调用start()方法时会执行run()方法，为什么我们不能直接调用 run() 方法？
+
+## 2022/04/01
+- 网站用户密码该如何保存（加密方式等等）
+
+## 2022/04/02
+
+## 2022/04/03
+
+## 2022/04/04
+
+## 2022/04/05
 
 ---
 
@@ -246,7 +253,6 @@ Redis6.0中的多线程和memcached的多线程区别
 ## 0206
 Redis数据过期后的删除策略？
 
-
 ## 0207
 Redis内存淘汰机制
 
@@ -261,6 +267,65 @@ Redis部署方式
 
 ## 0211
 如何用Redis实现一个消息队列?
+
+## 2022/02/12
+- 介绍一下单例模式的含义及使用场景
+
+## 2022/02/13
+- 介绍一下单例模式的多线程安全问题
+
+## 2022/02/14
+- 如何保证单例模式只有唯一实例？你知道的都有哪些方法？
+
+## 2022/02/15
+- 介绍一下观察者模式的含义及使用场景
+
+## 2022/02/16
+- 介绍一下装饰器模式的含义及使用场景
+
+## 2022/02/17
+- 介绍一下工厂模式的含义及使用场景
+
+## 2022/02/18
+- 请你说一说OOP的设计模式的五项原则
+
+## 2022/02/19
+- CPU分几级缓存，大小一般是多少。访问各级缓存需要的时间，需要多少CPU cycle的数量级。
+
+## 2022/02/20
+- C++: C++ 动态库、静态库的区别
+- Python: Python数据类型有哪些。简述 List 和 Tuple 的区别。
+- Java: 访问修饰符public,private,protected,以及不写（默认）时的区别？
+
+## 2022/02/21
+- 什么是五级流水线，数据冒险是什么
+
+## 2022/02/22
+- C++: volatile 和 atomic 的区别
+- Python: 什么是鸭子类型
+- Java: String和StringBuilder、StringBuffer的区别？
+
+## 2022/02/23
+- 从内存里读一个byte计算机内部是怎么样实现的
+
+## 2022/02/24
+- C++: 简述 virtual function
+- Python: LEGB rule
+- Java: 重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？
+
+## 2022/02/25
+- a、b两台服务器怎么判断是否能连通，为什么能用ping和traceroute
+
+## 2022/02/26
+- traceroute是怎么traceback最终让发出traceroute的客户端得到信息的
+
+## 2022/02/27
+- C++: 简述 vtable
+- Python: Python 2 和 Python 3 对比
+- Java: 描述一下JVM加载class文件的原理机制
+
+## 2022/02/28
+- hashmap和treemap的区别，除了红黑树还可以怎么实现treemap
 
 
 ---
