@@ -11,7 +11,8 @@ Makefile则是linux下面的文件，对于一个包含很多文件的工程，�
     i.设置cmake最低版本以及若版本被违反抛出的错误。
     ii.设置项目名称、语言（CXX代表C++）。
     iii.设置可执行文件的名称、源代码文件的文件名。
-```
+
+```c++
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 project(recipe-01 LANGUAGES CXX)
 add_executable(a a.cpp)
