@@ -47,7 +47,7 @@ using namespace std;
 
 class A {
 private:
-    void* operator new (size_t size) {
+    static void* operator new (size_t size) {
         return malloc(size);
     }
 public:
