@@ -1,7 +1,7 @@
 # C++中struct和class的区别，  C语言struct和C++ struct的区别？
 
 ### C++中struct和class的区别
-
+区别如下：
 
   1.struct的成员默认访问权限是public，class则是private；
   2.struct的默认继承关系是public，class则是private；
