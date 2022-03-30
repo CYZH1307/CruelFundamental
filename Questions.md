@@ -1,64 +1,5 @@
 # 每日一题
 
-## 2022/03/01
-- C++: static polymorphism 和 dynamic polymorphism 的区别
-- Python: 区别 `*args` 和 `**kwargs`
-- Java: 抽象类（abstract class）和接口（interface）有什么异同
-
-## 2022/03/02
-- 讲一下strstr的实现：Naive, B-M, B-M-H, KMP 及其复杂度
-
-## 2022/03/03
-- C++: 简述 static member variable 和 global variable 的区别
-- Python: 什么是迭代器、生成器？
-- Java: 静态嵌套类(Static Nested Class)和内部类（Inner Class）的不同？
-
-## 2022/03/04
-- 请你来说一下socket编程中服务器端和客户端主要用到哪些函数
-
-## 2022/03/05
-- C++: 简述 mechanism of new
-- Python: 什么是Python中的装饰器？
-- Java: Java 中会存在内存泄漏吗，请简单描述。
-
-## 2022/03/06
-- mutex的实现和局限性
-
-## 2022/03/07
-- C++: class initialization 的顺序。如果A class里面有一个member是B class的instance，A class 从class D derived得到，在创建A的instance的时候，initialization的顺序是怎样的。
-- Python: 简述Python的异常机制
-- Java: Java语言如何进行异常处理，关键字：throws、throw、try、catch、finally分别如何使用？
-
-## 2022/03/08
-- 请你说一下MySQL引擎和区别
-
-## 2022/03/09
-- C++: 一个空的类在instantiate的时候会有执行哪些操作
-- Python: 简述Python的内存管理
-- Java: 阐述final、finally、finalize的区别。
-
-## 2022/03/10
-- 请你来说一下linux内核中的Timer 定时器机制
-
-## 2022/03/11
-- C++: Lock-free queue 的实现。lock-free和lock-based的区别
-- Python: 简述 GIL，为什么有了GIL还要关注线程安全
-- Java: 阐述ArrayList、Vector、LinkedList的存储性能和特性
-
-## 2022/03/12
-- 讲一下cache missing rate 和降低的方法
-
-## 2022/03/13
-- C++: constructor和desctructor能virtual吗
-- Python: Python multiprocessing 和 multithreading 的区别
-- Java: TreeMap和TreeSet在排序时如何比较元素？Collections工具类中的sort()方法如何比较元素？
-
-## 2022/03/14
-- cmake和makefile的区别, 简述cmake到可执行文件的过程
-
-## 2022/03/15
-- 4G内存怎么读取一个5G的数据
-
 ## 2022/03/16
 - C++: 如何实现heap-only class，如何实现stack-only class
 - Python: Python中有日志吗，怎么使用
@@ -127,12 +68,46 @@
 - 网站用户密码该如何保存（加密方式等等）
 
 ## 2022/04/02
+- 对称性加密跟非对称性加密的比较，使用场景
 
 ## 2022/04/03
+- 简述epoll 和 poll, select 的区别 （和2021/12/18重复）
+- io 多路复用原理，在 redis 和 mysql 的实现
 
 ## 2022/04/04
+- LRU 和 LFU 的实现，要非常详细的数据结果和过程结构，尽可能的支持高并发
 
 ## 2022/04/05
+- 一个 100G 的文件，内存只有 8G，如何给文件排序，文件内容都是按行存储的 URL
+
+## 2022/04/06
+- 微博限定用户每次输入最多 140 个字符，用户如果传字符串很长的链接，怎么办
+
+## 2022/04/07
+- 搜索引擎倒排原理及实现方式
+
+## 2022/04/08
+- 统计大量访问日志(分几百 M 和 几百 G 的场景);得出访问次数最多的前 K 个人 (单台机器实现)
+- 10G文件，1G内存，找出最大的K个数，找出重复数
+
+## 2022/04/09
+- 设计微博评论的存储系统，要求支持分⻚；微博热门评论，在分页到很深的时候，如何进行优化
+
+## 2022/04/10
+
+## 2022/04/11
+
+## 2022/04/12
+
+## 2022/04/13
+
+## 2022/04/14
+
+## 2022/04/15
+
+## 2022/04/16
+
+## 2022/04/17
 
 ---
 
@@ -326,6 +301,65 @@ Redis部署方式
 
 ## 2022/02/28
 - hashmap和treemap的区别，除了红黑树还可以怎么实现treemap
+
+## 2022/03/01
+- C++: static polymorphism 和 dynamic polymorphism 的区别
+- Python: 区别 `*args` 和 `**kwargs`
+- Java: 抽象类（abstract class）和接口（interface）有什么异同
+
+## 2022/03/02
+- 讲一下strstr的实现：Naive, B-M, B-M-H, KMP 及其复杂度
+
+## 2022/03/03
+- C++: 简述 static member variable 和 global variable 的区别
+- Python: 什么是迭代器、生成器？
+- Java: 静态嵌套类(Static Nested Class)和内部类（Inner Class）的不同？
+
+## 2022/03/04
+- 请你来说一下socket编程中服务器端和客户端主要用到哪些函数
+
+## 2022/03/05
+- C++: 简述 mechanism of new
+- Python: 什么是Python中的装饰器？
+- Java: Java 中会存在内存泄漏吗，请简单描述。
+
+## 2022/03/06
+- mutex的实现和局限性
+
+## 2022/03/07
+- C++: class initialization 的顺序。如果A class里面有一个member是B class的instance，A class 从class D derived得到，在创建A的instance的时候，initialization的顺序是怎样的。
+- Python: 简述Python的异常机制
+- Java: Java语言如何进行异常处理，关键字：throws、throw、try、catch、finally分别如何使用？
+
+## 2022/03/08
+- 请你说一下MySQL引擎和区别
+
+## 2022/03/09
+- C++: 一个空的类在instantiate的时候会有执行哪些操作
+- Python: 简述Python的内存管理
+- Java: 阐述final、finally、finalize的区别。
+
+## 2022/03/10
+- 请你来说一下linux内核中的Timer 定时器机制
+
+## 2022/03/11
+- C++: Lock-free queue 的实现。lock-free和lock-based的区别
+- Python: 简述 GIL，为什么有了GIL还要关注线程安全
+- Java: 阐述ArrayList、Vector、LinkedList的存储性能和特性
+
+## 2022/03/12
+- 讲一下cache missing rate 和降低的方法
+
+## 2022/03/13
+- C++: constructor和desctructor能virtual吗
+- Python: Python multiprocessing 和 multithreading 的区别
+- Java: TreeMap和TreeSet在排序时如何比较元素？Collections工具类中的sort()方法如何比较元素？
+
+## 2022/03/14
+- cmake和makefile的区别, 简述cmake到可执行文件的过程
+
+## 2022/03/15
+- 4G内存怎么读取一个5G的数据
 
 
 ---
