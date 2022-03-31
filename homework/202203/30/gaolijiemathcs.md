@@ -74,4 +74,24 @@ swnd=min(cwnd,rwnd)
 
 发送窗口swnd的值是，拥塞窗口cwnd和接收窗口rwnd的最小值。
 
+慢开始门限ssthresh
+
 拥塞控制主要是四个算法：慢启动、拥塞避免、拥塞发生(超时重传【重传计时器超时 ssthreash为cwnd/2 cwnd=1】、快速重传【接收方连续收到3个相同ACK 快重传 ssthreash = cwnd/2 cwnd=cwnd/2)、快速恢复
+
+
+
+（1）慢开始、拥塞避免
+
+慢开始：cwnd=1, 进行 cwnd指数增长。
+
+拥塞避免：到达ssthresh以后进行 拥塞避免线性增长。
+
+网络拥塞发生行为：当出现【网络超时】，将ssthread 减半，cwnd重新设置为1，重新执行慢开始。
+
+（2）快重传、快恢复
+
+慢开始：cwnd=1, 进行cwnd指数增长。
+
+拥塞避免：到达ssthresh以后，拥塞避免加法线性增长
+
+网络拥塞发生行为：当出现【收到3个重复的ACK确认报文执行快重传】，快重传【ssthresh减半，cwnd设置为ssthresh，进行拥塞避免线性加法增大】
