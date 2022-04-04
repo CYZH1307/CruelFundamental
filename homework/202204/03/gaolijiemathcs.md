@@ -63,6 +63,8 @@ IO多路复用有三个函数，select最开始，poll解决select文件描述�
 
 #### redis中的实现
 
+redis因为是内存操作，IO不是瓶颈，瓶颈是网络IO连接数，提高连接数可以提升效率，可以使用IO多路复用。
+
 redis会依照环境当中提供的函数来实现io多路复用，如果没有可选的，就使用select。
 
 Redis会优先找有没有Solaries中的evport、Linux中的epoll和maxOS中的kqueue。如果没有的话用select。
