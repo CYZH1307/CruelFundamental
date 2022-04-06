@@ -11,15 +11,15 @@
 每次get(key)的时候，首先T++；然后取得mp0内key对应的time_old，更新mp0(key)至{key,T}；删除mp1(time_old)，插入{T,key}。最后返回mp(key)。  
 每次put(key, value)的时候，首先T++；然后分类讨论：
 
-##### mp内存在{key, value}
+##### ·mp内存在{key, value}
 
 更新mp0与mp1对应的time到T。
 
-##### mp内不存在{key, value}，且mp的size小于cap
+##### ·mp内不存在{key, value}，且mp的size小于cap
 
 为mp插入{key, value}，并更新mp0与mp1对应的time到T。
 
-##### 其他情况（mp内不存在{key, value}，且mp的size等于cap）
+##### ·其他情况（mp内不存在{key, value}，且mp的size等于cap）
 
 此时需要踢出最老的数据，通过mp1找到最老的time_oldest，和对应的key_oldest，删除它；然后删除mp0(key_oldest)。为mp插入{key, value}，并更新mp0与mp1对应的time到T。
 
@@ -49,15 +49,15 @@ struct Node {
 每次get(key)的时候，首先T++；然后取得mp内key对应的Node，更新其time到T，其num++。  
 每次put(key, value)的时候，首先T++；然后分类讨论：
 
-##### mp内存在{key, mp(key)}
+##### ·mp内存在{key, mp(key)}
 
 更新该key对应的Node的time到T，其num++。
 
-##### mp内不存在{key, mp(key)}，且mp的size小于cap
+##### ·mp内不存在{key, mp(key)}，且mp的size小于cap
 
 为mp插入{key, Node(key, value, T, 1)}。
 
-##### 其他情况（mp内不存在{key, mp(key)}，且mp的size等于cap）
+##### ·其他情况（mp内不存在{key, mp(key)}，且mp的size等于cap）
 
 此时需要踢出一条数据，通过Node中重载的<，我们可以在里面mp里面找到key_worst，删除它；然后插入{key, Node(key, value, T, 1)}。
 
