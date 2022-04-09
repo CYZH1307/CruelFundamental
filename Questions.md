@@ -1,69 +1,5 @@
 # 每日一题
 
-## 2022/03/16
-- C++: 如何实现heap-only class，如何实现stack-only class
-- Python: Python中有日志吗，怎么使用
-- Java: 反射机制优缺点和应用场景
-
-## 2022/03/17
-- 2G物理内存，new一个3G的数组时发生什么？
-
-## 2022/03/18
-- 你知道的中间件有哪些？
-
-## 2022/03/19
-- C++: 指针和引用的差别
-- Python: Python是如何进行类型转换的
-- Java: 什么是序列化?什么是反序列化?
-
-## 2022/03/20
-- 如果把访问次数过多的IP拉入黑名单，怎么实现，用什么数据结构
-
-## 2022/03/21
-- C++: C++中struct和class区别，C语言struct和C++struct区别
-- Python: os.path 和 sys.path 的区别
-- Java: Java 序列化中如果有些字段不想进行序列化，怎么办
-
-## 2022/03/22
-- B树和B+树的区别，B+树应用在哪?
-
-## 2022/03/23
-- C++: 讲一讲 std::move 和 std::forward （Effective Modern C++）
-- Python: 常用的字符串格式化有哪几种
-- Java: Java 中 IO 流分为几种?
-
-## 2022/03/24
-- Linux下怎么快速知道文档总共有多少行: 命令行, C API 或者别的自己用的语言的API
-
-## 2022/03/25
-- C++: 为什么优先选用别名声明，而非typedef？（Effective Modern C++）
-- Python: python里import一个package之后是怎么找到这个package的，怎么调用的
-- Java: 既然有了字节流,为什么还要有字符流?
-
-## 2022/03/26
--  Docker: docker解决什么问题
-
-## 2022/03/27
-- C++: 什么是noexcept?（Effective Modern C++）
-- Python: 在python里shallow copy和deep copy的差别?
-- Java: 为什么 Java 中只有值传递？
-
-## 2022/03/28
-- Docker: container 和 image 的区别，如何创建一个image
-
-## 2022/03/29
-- C++: 什么是constexpr？（Effective Modern C++）
-- Python: 闭包是什么？
-- Java: 说说 sleep() 方法和 wait() 方法区别和共同点?
-
-## 2022/03/30
-- TCP可以限速吗？
-
-## 2022/03/31
-- C++: 为什么建议优先选用const_iterator 而非iterator？（Effective Modern C++）
-- Python: Python中调用C++代码的方法有哪些？
-- Java: 为什么我们调用start()方法时会执行run()方法，为什么我们不能直接调用 run() 方法？
-
 ## 2022/04/01
 - 网站用户密码该如何保存（加密方式等等）
 
@@ -94,20 +30,35 @@
 - 设计微博评论的存储系统，要求支持分⻚；微博热门评论，在分页到很深的时候，如何进行优化
 
 ## 2022/04/10
+- 负载均衡的实现方案有哪些
 
 ## 2022/04/11
+- 讲一下CPU的内部组成
 
 ## 2022/04/12
+- 如何人为避免out-of-order execution
 
 ## 2022/04/13
+- 讲一下建立一个HTTP的过程
 
 ## 2022/04/14
+- 讲一讲 congestion control 的方法 （计网）
 
 ## 2022/04/15
+- 分辨 Functionality Testing, Unit Testing, Security Testing, Smoke Testing, Regression Testing
 
 ## 2022/04/16
+- 你根据什么来决定你的项目用sql还是nosql database?
 
 ## 2022/04/17
+- 针对你熟悉的编程语言和版本，描述锁的实现
+
+## 2022/04/18
+-  Linux 读写数据的整个流程，内核状态如何切换
+
+## 2022/04/19
+
+## 2022/04/20
 
 ---
 
@@ -360,6 +311,70 @@ Redis部署方式
 
 ## 2022/03/15
 - 4G内存怎么读取一个5G的数据
+
+## 2022/03/16
+- C++: 如何实现heap-only class，如何实现stack-only class
+- Python: Python中有日志吗，怎么使用
+- Java: 反射机制优缺点和应用场景
+
+## 2022/03/17
+- 2G物理内存，new一个3G的数组时发生什么？
+
+## 2022/03/18
+- 你知道的中间件有哪些？
+
+## 2022/03/19
+- C++: 指针和引用的差别
+- Python: Python是如何进行类型转换的
+- Java: 什么是序列化?什么是反序列化?
+
+## 2022/03/20
+- 如果把访问次数过多的IP拉入黑名单，怎么实现，用什么数据结构
+
+## 2022/03/21
+- C++: C++中struct和class区别，C语言struct和C++struct区别
+- Python: os.path 和 sys.path 的区别
+- Java: Java 序列化中如果有些字段不想进行序列化，怎么办
+
+## 2022/03/22
+- B树和B+树的区别，B+树应用在哪?
+
+## 2022/03/23
+- C++: 讲一讲 std::move 和 std::forward （Effective Modern C++）
+- Python: 常用的字符串格式化有哪几种
+- Java: Java 中 IO 流分为几种?
+
+## 2022/03/24
+- Linux下怎么快速知道文档总共有多少行: 命令行, C API 或者别的自己用的语言的API
+
+## 2022/03/25
+- C++: 为什么优先选用别名声明，而非typedef？（Effective Modern C++）
+- Python: python里import一个package之后是怎么找到这个package的，怎么调用的
+- Java: 既然有了字节流,为什么还要有字符流?
+
+## 2022/03/26
+-  Docker: docker解决什么问题
+
+## 2022/03/27
+- C++: 什么是noexcept?（Effective Modern C++）
+- Python: 在python里shallow copy和deep copy的差别?
+- Java: 为什么 Java 中只有值传递？
+
+## 2022/03/28
+- Docker: container 和 image 的区别，如何创建一个image
+
+## 2022/03/29
+- C++: 什么是constexpr？（Effective Modern C++）
+- Python: 闭包是什么？
+- Java: 说说 sleep() 方法和 wait() 方法区别和共同点?
+
+## 2022/03/30
+- TCP可以限速吗？
+
+## 2022/03/31
+- C++: 为什么建议优先选用const_iterator 而非iterator？（Effective Modern C++）
+- Python: Python中调用C++代码的方法有哪些？
+- Java: 为什么我们调用start()方法时会执行run()方法，为什么我们不能直接调用 run() 方法？
 
 
 ---
