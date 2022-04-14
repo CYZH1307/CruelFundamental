@@ -39,7 +39,7 @@
 - 如何人为避免out-of-order execution
 
 ## 2022/04/13
-- 讲一下建立一个HTTP的过程
+- 讲一下建立一个HTTP request的过程
 
 ## 2022/04/14
 - 讲一讲 congestion control 的方法 （计网）
