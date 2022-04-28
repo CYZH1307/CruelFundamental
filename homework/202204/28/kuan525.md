@@ -1,6 +1,6 @@
 #### 数据库主从复制的原理是什么？
 
-MySQL主从复制涉及到三个线程，一个运行在**主节点（log dump thread），其余两个(I/O thread, SQL thread)**运行在从节点:
+MySQL主从复制涉及到三个线程，一个运行在主节点（log dump thread），其余两个(I/O thread, SQL thread)运行在从节点:
 
 ## **5.1主节点log dump线程**
 
