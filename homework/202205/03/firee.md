@@ -1,0 +1,3 @@
+### 消息队列如何保证消息的顺序性？
+
+感觉属于一个consistency的问题，产生这个问题的原因是为了performance，可以只用一个queue，降低performance保证consistency
