@@ -1,1 +1,9 @@
 # 消息中间件如何做到高可用？
+
+以kafka为例。kafka会均匀地把一个partition的所有数据replica分布在不同的机器上，这样就可以提高容错性。如果某个broker宕机了，该broker的partition在其他机器上有副本，此时会从这些replicas中重新选举出一个新的leader出来，继续读写这个新的leader即可。
+
+## 写数据
+生产者就写向leader，然后leader将数据落到磁盘上之后，接着其他follower自己主动从leader来pull数据。一旦所有follower同步好了数据，就会发送ack给leader，leader收到了所有的follower的ack之后，就会返回写成功的消息给消息生产者。（这只是一种模式，可以调整）。
+
+## 读数据
+消费数据的时候，只会从leader进行消费。但是只有一个消息已经被所有follower都同步成功返回ack的时候，这个消息才会被消费者读到。
