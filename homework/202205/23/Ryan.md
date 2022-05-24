@@ -7,4 +7,4 @@ move的使用主要是为了避免冗余copy，T a = move(b)的作用是在构�
 需要注意的是，如果类T没有移动构造函数，则move不生效，依然会发生复制。
 
 # forward
-在不可避免copy的场景中，b的类型必然是const T &。此时move不生效。这时需要判断move是否适用。为了避免这次判断，forward被加入，它会判断入参的类型。如果是可以避免copy的右值传入，则触发move；如果是左值则直接copy，而且可以保留const。
+在不可避免copy的场景中，b的类型必然是const T &。此时move不生效。这时需要判断move是否适用。为了避免这次判断，forward被加入，它会判断入参的类型。如果传入了可以避免copy的右值，则触发move；如果传入了左值则直接copy，而且可以保留const。
