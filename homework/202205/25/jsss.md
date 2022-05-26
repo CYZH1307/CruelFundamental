@@ -8,4 +8,6 @@
 - weak_ptr: 弱智能指针, 与`shared_ptr`关联后, 可通过`lock()`成员函数获取一个`shared_ptr`对象, 注意需要判断.(`lock() != nullptr`)
 - unique_ptr: 独占指针.
 
+`weak_ptr`的可以用来防止循环引用.
+
 `shared_ptr`的实现中有一根指向`control block`的**指针**, 该`control block`中包含两个`atomic int`, 分别是`shared_ptr`、`weak_ptr`引用计数. 使用`shared_ptr`的时候需要注意指针资源只能构造一个`shared_ptr`对象, 否则多次构造会导致重复释放, 造成`core dump`.
