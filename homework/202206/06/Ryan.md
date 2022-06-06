@@ -4,6 +4,7 @@
  从大到小： ls -lS 由小到大：ls -lSr
  ## 查看日志相关技巧：
  如下所示：
+    
     1. tail命令，实时追踪： tail -f [fileName]; 查看最后10行：  tail -n 10 [fileName]
     2. head命令，查看头10行： head -n 10 [fileName]
     3. cat命令，合并文件：cat [fileName1] [fileName2] > [fileName]；追加文件：cat -n [fileName1] > [fileName2] 
