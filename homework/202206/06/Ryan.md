@@ -3,6 +3,12 @@
  ## 给文件按大小排序：
  从大到小： ls -lS 由小到大：ls -lSr
  ## 查看日志相关技巧：
+ 如下所示：
+    1. tail命令，实时追踪： tail -f [fileName]; 查看最后10行：  tail -n 10 [fileName]
+    2. head命令，查看头10行： head -n 10 [fileName]
+    3. cat命令，合并文件：cat [fileName1] [fileName2] > [fileName]；追加文件：cat -n [fileName1] > [fileName2] 
+    4. sed命令，查找指定行号（%~10行）：sed -n '5,10p' [fileName]；查找指定日期： sed -n '/2014-12-17 16:17:20/,/2014-12-17 16:17:36/p' [fileName]
+ 
  ## 查询一个文件的行数：
  -wc -l [fileName]
  ## 查询一个文件内出现重复最多的单词：
