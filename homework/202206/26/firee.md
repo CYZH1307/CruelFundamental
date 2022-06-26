@@ -1,0 +1,41 @@
+### 简述 DNS 劫持
+
+
+
+##### DNS 劫持是什么
+
+
+
+DNS 是把域名翻译为 ip 地址的协议，劫持就是想办法把一个域名转化到想要的 ip
+
+
+
+##### DNS 劫持具体有哪些技术手段呢？
+
+**1、DNS缓存感染**
+
+攻击者使用DNS请求将数据放入脆弱的DNS服务器的缓存。然后这些缓存信息在用户进行DNS访问时返回用户，将对通常的域名的访问引导到入侵者设定的钓鱼、挂马等页面，或通过伪造邮件或其他server服务取得用户密码信息会给客人带来进一步的侵害。
+
+**2、DNS信息劫持**
+
+TCP/IP系统避免以诸如序列号等各种方式插入钓鱼数据，但是入侵者可以通过截取客户端与DNS服务器的交互来推测服务器响应于客户端的DNS查询ID。每个DNS报告包括相关联的16位ID号，并且DNS服务器从该ID号获取请求源位置。攻击者在DNS服务器前向用户发送虚假应答，欺骗客户访问恶意网站。
+
+**3、DNS[重定向](https://www.zhihu.com/search?q=重定向&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra={"sourceType"%3A"article"%2C"sourceId"%3A"452053341"})**
+
+攻击者如果将权威DNS服务器重定向到恶意DNS服务器，那么被劫持域名的解析就完全置于攻击者的控制之下。
+
+**4、盗用DNS服务器**
+
+在该攻击中，攻击者不仅可以破坏DNS服务器还可以改变DNS记录，将DNS请求重定向到恶意网站。
+
+**5、[中间人](https://www.zhihu.com/search?q=中间人&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra={"sourceType"%3A"article"%2C"sourceId"%3A"452053341"})（MiTM）DNS攻击**
+
+在DNS劫持中还有一种类型是，攻击者执行中间人（MiTM）攻击以截断用户与DNS服务器之间的通信，并向恶意网站重定向用户，以提供不同的目标IP地址。
+
+**6、流氓DNS服务器**
+
+在此攻击中，攻击者可以破解DNS服务器，并更改DNS记录以将DNS请求重定向到恶意站点。
+
+
+
+参考：https://zhuanlan.zhihu.com/p/452053341
