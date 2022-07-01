@@ -13,6 +13,6 @@
  - iii.事务对版本的可见性：每个事务都会在执行时生成一个Read View，里面含有当前未提交的事务id列表list = {min_id, ..., max_id}。  
 
     1.若某个链表节点的trx_id < min_id，则必然可见；  
-    2.若某个链表节点的trx_id > max_id，则必然不可见；
+    2.若某个链表节点的trx_id > max_id，则必然不可见；  
     3.若某个链表节点的trx_id ∈ [min_id, max_id]且trx_id ∉ list，可见；  
     4.若某个链表节点的trx_id ∈ [min_id, max_id]且trx_id ∈ list，则视乎该节点的数据是否事务本身修改的，是则可见，否则不可见；
