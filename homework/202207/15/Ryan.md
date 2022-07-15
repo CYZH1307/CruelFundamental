@@ -3,7 +3,7 @@
 单例是一种一个类只有一个实例的设计模式， 它提供一个访问该实例的全局节点。  
 C++的简单单例模式通常使用私有化构造函数来实现
 
-'''c++
+```c++
 class Singleton{
 private:
     Singleton(){
@@ -25,4 +25,4 @@ public:
     void use() const { std::cout << "in use" << std::endl; }
 };
 
-'''
+```
