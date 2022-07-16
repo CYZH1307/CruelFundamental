@@ -14,7 +14,7 @@
 ```
 class Singleton {
     public:
-        Singleton& getInstance() {
+        static Singleton& getInstance() {
             static Singleton instance_;
             return instance_;
         }
