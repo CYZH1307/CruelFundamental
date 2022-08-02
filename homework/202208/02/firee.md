@@ -1,6 +1,5 @@
 ### 用你熟悉的语言写一个并行求从0到123456789的数字之和的函数
 
-
 ```go
 package main
 
@@ -13,7 +12,7 @@ func sum(begin int64, end int64, c chan int64) {
 }
 
 func main() {
-	n := 10
+	n := 64
 	maxn := 123456789 + 1
 	c := make(chan int64, n)
 	for i := 0; i < n; i++ {
