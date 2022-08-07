@@ -1,0 +1,1 @@
+在计算机科学中，radix tree(也被称为radix trie，或者compact prefix tree)用于表示一种空间优化的trie(prefix tree)数据结构。 假如树中的一个节点是父节点的唯一子节点(the only child)的话，那么该子节点将会与父节点进行合并，这样就使得radix tree中的每一个内部节点最多拥有r个孩子， r为正整数且等于2^n(n>=1)。不像是一般的trie树，radix tree的边沿(edges)可以是一个或者多个元素。
