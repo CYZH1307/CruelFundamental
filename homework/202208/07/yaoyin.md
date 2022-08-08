@@ -17,4 +17,4 @@ Encrypted Message: $C = M^e \mod n $
 
 ## Decryption
 
-$M = C^d \ mod \ n $
+$M = C^d \ mod \ n $:
