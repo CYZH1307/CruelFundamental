@@ -1,0 +1,25 @@
+> [原文](https://notes.singee.me/#/page/%E8%AF%B7%E7%AE%80%E8%BF%B0rsa%E7%AE%97%E6%B3%95%E7%9A%84%E5%8A%A0%E8%A7%A3%E5%AF%86%E6%B5%81%E7%A8%8B)
+
+- ![Replaced by Image Uploader](https://vip2.loli.io/2022/08/08/mM8lktn7FYREx2o.png)  
+- [代码实现 (Go 1.18)](https://cs.opensource.google/go/go/+/refs/tags/go1.18.5:src/crypto/rsa/rsa.go;drc=9de49ae01ad332d8cbb79a3094c3fc3d6b6931e6;l=242)  
+-  
+- [[非对称加密]] 的本质：让解密的代价与暴力破解的代价相差悬殊  
+- RSA 的思想：选出两个大质数的代价很小、计算两个大质数乘积的代价也很小，而将两个大质数的乘积结果进行因式分解逆推出这两个质数（只要这两个质数都足够大）在目前是基本不可能的  
+-  
+- RSA 中并没有严格规定用来加密的是公钥还是用来解密的是公钥，RSA 中生成的两个数对（即上图中的 e、d）是对称的，二者均可用一个加密而用另一个解密，且**无法用其中的一个推导出另一个**，同时，公私钥的关系理解上为：保密的是私钥，公开的是公钥  
+	- 在加密的场景中，用来加密的是 e，为公钥，用来解密的是 d，为私钥【因为是别人加密你解密】  
+	- 在数字签名的场景中，用来签名（加密）的是 d，为私钥，而公布出去让他人验证签名（解密）的是 e，为公钥【因为是你加密别人解密】  
+-  
+- 注：可以发现，根据典型的 RSA 算法（无论是加密还是签名），**使用的公私钥是相同的**，但事实上用来加解密的是不同的 —— 加密时为公钥 e 加密、解密时为私钥 d 加密。  
+- 因为对称性，虽然**反过来在数学上是可以的**（即 e 作私钥、d 作公钥），但工程上是不允许的。  
+	- 原因：在生成时，e 通常选取一个较小值（ e <= 65537）（事实上，在 Go 中，[e 恒定为质数 65537](https://cs.opensource.google/go/go/+/refs/tags/go1.19:src/crypto/rsa/rsa.go;drc=e845f572ec6163fd3bad0267b5bb4f24d369bd93;l=296)），因此如果将 d 公开那么攻击者将很容易就可以得到 e 的值  
+	-  
+-  
+- 在数学上，私钥和公钥无法从一个推导出另一个；**在实践上，一般保存私钥时都会同时保存公钥**  
+	- 例：[PKCS1 Private Key 结构](https://cs.opensource.google/go/go/+/refs/tags/go1.19:src/crypto/x509/pkcs1.go;drc=4b09c8ad6fb9d30b9c3417b5364809ff0006749d;l=15) 同时保存了 e 和 d 的值，而 [PKCS1 Public Key 结构](https://cs.opensource.google/go/go/+/refs/tags/go1.19:src/crypto/x509/pkcs1.go;drc=4b09c8ad6fb9d30b9c3417b5364809ff0006749d;l=39) 则只有 e  
+	-  
+- ## 参考  
+	- [RFC 8017: PKCS #1: RSA Cryptography Specifications Version 2.2](https://www.rfc-editor.org/rfc/rfc8017.html)  
+	- [RSA: Does it matter if you use e or d to encrypt (加密) ?](https://crypto.stackexchange.com/questions/54557/rsa-does-it-matter-if-you-use-e-or-d-to-encrypt)  
+	- [RSA的公钥和私钥到底哪个才是用来加密和哪个用来解密？ - 刘巍然-学酥的回答 - 知乎](https://www.zhihu.com/question/25912483/answer/31653639)  
+	- [RSA的公钥和私钥到底哪个才是用来加密和哪个用来解密？ - 知乎用户的回答 - 知乎](https://www.zhihu.com/question/25912483/answer/252031361)  
