@@ -1,0 +1,3 @@
+## 什么是TimeWait状态? 为什么需要TimeWait状态，TimeWait的状态需要等多久？
+
+主动关闭方在收到被动关闭放的FIN包并返回ACK之后，会进入TIME_WAIT状态，TIME_WAIT状态会持续两个最大报文生存时间，一个MSL是确保主动关闭方的最后ACK能够到达对方，另一个MSL是确保被动关闭方重发的FIN能被主动关闭方收到
