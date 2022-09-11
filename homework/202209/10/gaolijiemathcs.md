@@ -15,6 +15,10 @@
 
 
 
-
-
 ref:https://www.cnblogs.com/foxgab/p/6900101.html
+
+
+
+HTTPDNS
+
+ref:http://it.taocms.org/09/112093.htm
