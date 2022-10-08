@@ -1,0 +1,5 @@
+- # Java：创建线程的几种方式？  
+	- 方法一：创建继承 Thread 的类，重写 run 方法；实例化该类，调用 start 方法  
+	- 方法二：创建实现 Runnable 接口的类，实现 run 方法；实例化该类，调用 start 方法  
+	- **以上二者的问题：无法获得执行结果（返回值）**  
+	- 方法三：创建实现 Callable 接口的类，实现 call 方法；创建一个 ExecutorService，实例化前述创建的类，调用 ExecutorService 的 submit 提交实例好的对象  
