@@ -1,0 +1,25 @@
+- Goroutine 是 Go 中的核心组成，Go 有意的弱化了（甚至可以说无法使用）多进程和多线程的编程模型，利用支持抢占式调度的 Goroutine 来实现了基于协程的多任务模型。  
+- 创建一个 Goroutine 十分简单，就是一个 `go xxx()` 语句即可，其中 `xxx` 指代的是要执行的函数名称；在运行时，该函数会被加入至一个「执行队列」，并在适当时机进行执行。  
+-  
+- ## GMP 模型  
+	- Go 的调度模型为 GMP  
+		- G Goroutine  
+		- M Machine 指的是真实的操作系统中的线程  
+		- P Processor 可以理解为一个「管理员」，用于处理 G 和 M 的关系  
+		- M 与 P 为 1:1，二者为「绑定」关系  
+			- 这个比例中的的 M 特指会执行 Goroutine 的 M，不包括阻塞于系统调用的 M  
+		- M 与 G 的比例关系不定，通常称之为 1:N 模型  
+	- G 是在 M 上执行的，如果 G 创建了一个新的 G，那么该 G 会被放于与 G 所位于的 M 相绑定的 P 所拥有的一个队列中（称为 local queue）等待执行  
+		- local queue 有一定的容量，如果容量到了会改为放于全局队列（称为 global queue）中  
+	- 当 G 执行完时（或超时被暂停时），M 会去 P 的 local queue 中查找 Goroutine 去执行  
+		- 如果 P 的 local queue 为空，其会从全局或其他 M 的 P 的 local queue 中抢占  
+			-  
+- ## 有趣的问题  
+	- ### Go 的抢占式调度什么情况会触发「抢占」  
+		- 阻塞在系统调用 [ref1](https://github.com/golang/go/blob/go1.19.2/src/runtime/proc.go#L5308) [ref2](https://github.com/golang/go/blob/go1.19.2/src/runtime/proc.go#L5315)  
+			- 抢占 P：即保留原来 G 和 M 的绑定关系，而解绑 M 和 P  
+		- 执行时间过长 [ref](https://github.com/golang/go/blob/go1.19.2/src/runtime/proc.go#L5308)  
+			- （对于非系统调用情况）利用信号抢占 M  
+	- ### Go 的抢占式调度是怎么实现的  
+		- 监控抢占条件：Go 存在一个全局的监控循环  
+		- 抢占 M 实现原理：操作系统信号机制  
