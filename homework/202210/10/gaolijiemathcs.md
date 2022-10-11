@@ -51,3 +51,7 @@ M：每个M代表一个内核线程，操作系统调度器负责把内核线程
 
 
 ref：https://juejin.cn/post/7044741465930465311
+
+
+
+firee ref:  https://www.zhihu.com/question/20862617/answer/921061289
