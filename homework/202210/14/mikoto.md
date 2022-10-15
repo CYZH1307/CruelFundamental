@@ -1,0 +1,3 @@
+## 为什么一定要等2MSL
+
+2MSL 第一个MSL是为了等待自己发送的最后一个ACK到达server，第二个MSL是为了等待server可能重发的FIN报文
