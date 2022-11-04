@@ -1,5 +1,92 @@
 # 每日一题
 
+## 2022/11/01
+- TCP 是否可以改为两次握手？（请从 ISN 的角度思考）
+
+## 2022/11/02
+- 请简述 TFO 的设计思路与实现
+
+## 2022/11/03
+- （请结合前两天的问题，综合思考）TFO 是如何解决重复连接的问题的？
+
+## 2022/11/04
+- Linux x86 下进程最多使用的栈空间和堆空间分别是多少？
+
+## 2022/11/05
+- 如果进程试图使用超出（昨天题目中的）最大空间的内存，会发生什么？
+
+## 2022/11/06
+- Linux 如何知晓 OOM？
+
+## 2022/11/07
+- OOM 时 Linux 会做些什么？
+
+---
+
+# 过往题目
+
+## 202209
+
+## 2022/09/11
+- 讲讲TCP连接6种标识
+
+## 2022/09/12
+- 讲讲HTTP状态码
+
+## 2022/09/13
+- HTTP301和302的区别
+
+## 2022/09/14
+- HTTP中get 与 post 的区别，哪个更安全一些
+
+## 2022/09/15
+- MVC，MVP，MVVM的区别
+
+## 2022/09/16
+- DNS劫持如何避免
+
+## 2022/09/17
+- 设计模式六大原则是什么？
+
+## 2022/09/18
+- What is RAID structure in OS? What are the different levels of RAID configuration?
+
+## 2022/09/19
+- What is a bootstrap program in OS?
+
+## 2022/09/20
+- Explain demand paging?
+
+## 2022/09/21
+- What is starvation and aging in OS?
+
+## 2022/09/22
+- What are the different levels of abstraction in the DBMS?
+
+## 2022/09/23
+- What is normalization and what are the different types of normalization in the DBMS?
+
+## 2022/09/24
+- 什么是候选码，主码，超码，外键
+
+## 2022/09/25
+- 什么是检查点？（数据库）
+
+## 2022/09/26
+- 触发器和存储过程的区别是什么？
+
+## 2022/09/27
+- DROP、TRUNCATE 和 DELETE 命令有什么区别？
+
+## 2022/09/28
+- 什么是视图？（数据库）
+
+## 2022/09/29
+- 什么是哈希树(Merkle Tree)？
+
+## 2022/09/30
+- 处理器架构中CISC 和 RISC 的区别是什么？
+
 
 ## 2022/10/01
 - 处理器的三级调度？
@@ -106,81 +193,6 @@ JAVA： 说说ThreadLocal原理
 
 ## 2022/10/31
 - 为什么 Linux 默认页大小是 4KB？什么是大页？什么情况适合用大页？
-
-## 2022/11/01
-- TCP 是否可以改为两次握手？（请从 ISN 的角度思考）
-
-## 2022/11/02
-- 请简述 TFO 的设计思路与实现
-
-## 2022/11/03
-- （请结合前两天的问题，综合思考）TFO 是如何解决重复连接的问题的？
-
----
-
-# 过往题目
-
-## 202209
-
-## 2022/09/11
-- 讲讲TCP连接6种标识
-
-## 2022/09/12
-- 讲讲HTTP状态码
-
-## 2022/09/13
-- HTTP301和302的区别
-
-## 2022/09/14
-- HTTP中get 与 post 的区别，哪个更安全一些
-
-## 2022/09/15
-- MVC，MVP，MVVM的区别
-
-## 2022/09/16
-- DNS劫持如何避免
-
-## 2022/09/17
-- 设计模式六大原则是什么？
-
-## 2022/09/18
-- What is RAID structure in OS? What are the different levels of RAID configuration?
-
-## 2022/09/19
-- What is a bootstrap program in OS?
-
-## 2022/09/20
-- Explain demand paging?
-
-## 2022/09/21
-- What is starvation and aging in OS?
-
-## 2022/09/22
-- What are the different levels of abstraction in the DBMS?
-
-## 2022/09/23
-- What is normalization and what are the different types of normalization in the DBMS?
-
-## 2022/09/24
-- 什么是候选码，主码，超码，外键
-
-## 2022/09/25
-- 什么是检查点？（数据库）
-
-## 2022/09/26
-- 触发器和存储过程的区别是什么？
-
-## 2022/09/27
-- DROP、TRUNCATE 和 DELETE 命令有什么区别？
-
-## 2022/09/28
-- 什么是视图？（数据库）
-
-## 2022/09/29
-- 什么是哈希树(Merkle Tree)？
-
-## 2022/09/30
-- 处理器架构中CISC 和 RISC 的区别是什么？
 
 ## 2022
 ## 0101
