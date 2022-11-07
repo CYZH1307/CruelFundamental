@@ -1,0 +1,1 @@
+Linux用户内存都是读写时分配，所以系统发现需要内存基本上都是发生在handle_mm_fault()的时候（其他特殊流程类似，这里忽略），handle_mm_fault()要为缺的页分配内存，就会调alloc_pages()系列函数，从而调prepare_alloc_pages()，进而进入__alloc_pages_direct_reclaim()，这里已经把可以清到磁盘上的缓冲都清了一次了。这样之后还是分配不到内存，就只好进入OMM Killer了（pagefault_out_of_memory()）。
