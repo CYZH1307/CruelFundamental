@@ -18,3 +18,7 @@ oom_score：系统打分是根据当前进程当前时间占用内存计算，�
 - 禁止的OOM kill机制，当系统发生 oom 的时候打开 kernel panic，此时系统会发生重启。
 
 ref:https://blog.csdn.net/u014630623/article/details/88939100
+
+
+
+推荐阅读：https://www.kernel.org/doc/gorman/html/understand/understand016.html
