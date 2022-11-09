@@ -1,0 +1,6 @@
+- OOM Score = 内核计算出的 oom_score + 用户指定的 oom_score_adj  
+	- 值越高，越容易被 Kill  
+	- oom_score_adj 范围在 -1000 ~ 1000  
+		- 特别的，-1000 代表不会被 kill  
+	- oom_score = 内存消耗 / 总内存  
+		- 拥有 [CAP_SYS_ADMIN](https://man7.org/linux/man-pages/man7/capabilities.7.html#:~:text=CAP_SYS_ADMIN) 特权的进程其内存消耗会被减少 3% 计算  
