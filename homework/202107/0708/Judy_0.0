@@ -1,0 +1,44 @@
+Garbadge collection - Java
+
+  mark - starts from the root node, mark all reachable node as live
+  sweap - starts from the lowest position, if the node is not marked as live, link it to "free" linked list
+  compact - compact memory by moving around the objects and making the allocation contiguous not fragmented.
+  
+1. The Serial Collector
+  simplest one, designed for single-threaded environments
+  This collector freezes all application threads whenever it’s working
+  
+2. The Parallel / Throughput collector
+  uses multiple threads multi CPUs to scan through and compact the heap
+  kick in only when the heap is full/near-full
+  downside: it will stop application threads when performing either a minor or full GC collection. 
+  best suited for apps that can tolerate application pauses and are trying to optimize for lower CPU overhead caused by the collector
+  use cases:
+    less memory
+    less CPUs
+    app demands high thoughtput and can whitstand pauses
+  
+3. The CMS（“concurrent-mark-sweep”） Collector
+  uses multiple threads (“concurrent”) to scan through the heap (“mark”) for unused objects that can be recycled (“sweep”).
+  GC and app can running simultaneously, does not wait for the old generation to be full
+  Stops the world only during mark/re-mark
+  use case: 
+    more memory
+    high number of CPUs
+    app demands short pauses
+    
+  4. G1 (garbadge first)
+    it divides heap into different regions and during a GC it can collect a sub-set of regions
+    it dynamically selects a set of regions to act as young generation in the next GC cycle
+    regions with most garbadge will be collected first
+    pros: 
+      more predictable GC pauses
+      low pauses with fragmentation
+      parallelism and concurrency together
+      better heap utilization  
+
+ref
+https://www.youtube.com/watch?v=UnaNQgzw4zY
+https://www.overops.com/blog/garbage-collectors-serial-vs-parallel-vs-cms-vs-the-g1-and-whats-new-in-java-8/
+https://www.youtube.com/watch?v=lXj6j9hVGLQ
+

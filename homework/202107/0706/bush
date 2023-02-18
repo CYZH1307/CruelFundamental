@@ -1,0 +1,18 @@
+Index in MySQL
+Index is a support to spped up query performance in database.
+There are some data structures used to build Index.
+1. Binary Search Tree
+It takes O(logn) time for query in average.
+But in database like MySQL, we always have some auto increament field.
+This could lead to build a list and make timecomplexity O(n).
+2. Red-black Tree/AVL Tree
+Based on the disadvantage above, we use a balanced Binary Search Tree to cut down the worst time complexity.
+3. B Tree
+The balanced binary tree implement is good.
+But with B tree, we could lower the height of the whole tree, which could help to make query faster.
+4. B+ Tree
+B Tree saves data in its interval nodes, but B+ Tree only saves data in its leaves node. Its interval nodes only save the data's reference.
+This feature makes B+ Tree saving more info compre to B Tree.
+Further more, B+ Tree's leaves are connected, which could benifit range query.
+
+And actually, MySQL chossed B+ Tree to build its Index.

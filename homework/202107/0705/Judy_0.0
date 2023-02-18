@@ -1,0 +1,51 @@
+Redis vs. Memcached
+
+both
+server-side caching solution
+noSQL key-value in-memory data storage systems
+open source
+used to speed up applications
+supported by the major cloud service providers
+
+Data storage
+Redis
+  String, List, Hash, Set, Sorted Set
+  modify the data without loading it into app, less I/O operation
+  uses an encapsulated version of the malloc/free memory management
+  max 512MB for key and value
+Memcached 
+  stirng indexed by a string key
+  less overhead
+  if full, it will start to purge values on a least recently used order
+  segments the allocated memory into chunks of different sizes, and stores key-value data records of the corresponding size
+  max key 250B and value 1MB
+  load entire string to app, deserialized, modify object and serilize
+  
+scale
+Redis
+  master/slave architecture
+  single-threaded and has native support for clustering, it grows well horizontally
+  
+Memcached
+  scaled vertically, as it is multithreaded
+  
+persistence
+Redis
+  in-memory (mostly) data store and it is not volatile, RDB snapshot, AOF log(better for no data loss)
+  No eviction,All keys LRU, Volatile LRU, All keys random, Volatile random, Volatile TTL eviction
+  
+Memcached
+  in-memory cache and it is volatile
+  LRU eviction
+  
+Use case
+Redis
+  more flexible and powerful
+  easy to migrate from Memcached
+  
+Memcached
+  easy of use
+  in some case performance is better  
+
+ref
+https://www.imaginarycloud.com/blog/redis-vs-memcached/

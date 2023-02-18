@@ -1,0 +1,18 @@
+if a deadlock occurs, there must be below 4 conditions simultaneously
+1. Mutual Exclusion
+There are some resources that can't be shared by threads/processes.
+2. No Preemption
+Threads/processes can't take over others resources before they release them.
+3. Hold and Wait
+All the threads/processes don't release their private resources when request for new resources is pending.
+4. Circular Wait
+The resource requests between the threads/processes could form a circle.
+
+To deal with deadlock, there are 3 ways.
+1. Prevention
+To break anyone of the 4 conditions mentioned above.
+2. Avoidance
+To pre calculate if the request for new resources would lead to deadlock.
+For example the bankers' algorithm, simulate to grant resources and check if it would lead to deadlock, if so then block the request. 
+3. Detection
+When a deadlock occurs, find the circle set of the processes and kill one of them to release deadlocked resources.

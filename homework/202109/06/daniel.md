@@ -1,0 +1,8 @@
+- RocketMQ 由 name server, consumer, producer, broker 角色组成
+- 什么是 push?
+    - push 是服务器接收到消息后, 主动把消息传给 客户端. 比如 websocket 的交互 (phoenix framework)
+- 什么是 long polling
+    - 客户端以一定的时间间隔去定时的拉取服务器的消息
+- 为什么用 pull 不用 push?
+    - push 需要 broker 做大量的工作, 尤其是有广播的情况下; 另外, push 方式无法考虑到 client的压力, 没有背压机制
+    - pull 在牺牲一定的实时性的情况下, 由客户端来控制消息处理的节奏; 另外, broker 在收到请求后会hold 主连接一小段时间, 如果有消息, 则复用此连接直接发送给客户端.

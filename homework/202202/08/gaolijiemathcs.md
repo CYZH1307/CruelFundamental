@@ -1,0 +1,31 @@
+# Redis部署方式
+
+- 单节点(standalone)模式部署：单节点启动Redis进程，暴露对应的服务端口。缺点明显：无法保证高可用或横向扩展(只能增加宿主机配置)。
+  - 优点：简单。
+  - 缺点：（1）内存瓶颈，单机内存有限。（2）IO瓶颈：客户端数量多，同时处理客户端数量有限。（3）可用性不高：单机宕机，整个redis不可用。
+- 主从(master-slave)模式部署：一个master结点和若干个slave结点。slave可以有更多的slave结点。
+  - 主从之间同步有全量同步或增量同步。
+    - 全量同步：master结点BGSAVE生成对应的RDB文件后，发送给slave结点，slave结点接收到写入命令后，将master发送来的文件加载并写入。
+    - 增量同步：master-slave关系建立，master没执行一次都同步数据到slave。
+  - 优点：读写分离，读压力分散到从节点，主节点宕机从节点仍然可读。
+  - 缺点：
+    - 主节点承受所有写压力
+    - 每个结点数据都一样，可存储数据总量和单机一样，没有解决容量问题。
+    - 主机宕机，宕机前未同步数据，到slave可能会丢失。
+    - 主机宕机需要手动配置型的master结点。
+- 哨兵(Sentinel)模式部署：Sentinel哨兵集群用于监控Redis集群结点运行状态，监控master与slave状态，通过故障转移方式保证redis集群高可用。
+  - Sentinel哨兵作用：
+    - 监控：不断向master与slave与其他sentinel发送ping，监控运行状态。
+    - 提醒：Redis结点异常，通过API向其他发送通知。
+    - 故障转移：Sentinel集群检测某个master不可用，进行一次故障转移，将故障的master节点的slave结点升级为新的master，通知其他slave更新master为新master。客户端访问故障master，会返回信的master结点给客户端。
+  - 哨兵部署Redis有高可用，但是横向扩展依赖宿主机。
+  - 监控每个Redis服务器
+    - 如果master服务异常，会有多个哨兵进行确认，如果一半确认服务异常，则对master服务进行下线，选举出当前一个slave结点成为master结点。
+    - 如果是slave结点服务异常，也是多个哨兵确认，下线处理。
+  - 优点：高可用。
+  - 缺点：未解决空间有限的问题。
+- Redis集群(cluster)模式部署：去中心化方式，多个master结点保存整个集群全部数据，master结点不止一个，可以有N个每个master结点再分配N个slave结点，可以看做为N个主从模式。
+  - 优点：
+    - 每个master存储不同的数据，间接解决单机master结点存储容量问题。
+    - 当一个master不可用，其他master仍然可用，整个集群仍然处于高可用。
+  - 数据依据key进行crc-16散列，将key散列为slot槽，而每个master结点负责不同的slot范围，每个master结点可以配置多个slave。同时在集群中再使用sentinel哨兵提升整个集群的高可用性。

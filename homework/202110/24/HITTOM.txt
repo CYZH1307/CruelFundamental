@@ -1,0 +1,10 @@
+Q: cpp多线程实现
+A:
+cpp11之前不支持多线程,只能调用unix中pthread或openmp,mpi这些代码库来实现多核计算
+cpp11之后有了thread,线程初始化后会被设为joinable,可被joinable的线程必须在销毁前被主线程join或设置为detached
+
+do {
+  std::thread::id thread_id = std::this_thread::get_id(); // 获取当前线程id
+  cout << thread_id << endl;
+  std::this_thread::yield(); // 放弃当前线程执行
+} while (std::chrono::high_resolution_clock::now() < end_time);

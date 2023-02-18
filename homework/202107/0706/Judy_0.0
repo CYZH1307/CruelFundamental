@@ -1,0 +1,24 @@
+MySQL index
+
+InnoDB 
+  a general-purpose storage engine that balances high reliability and high performance. 
+  In MySQL 8.0, InnoDB is the default MySQL storage engine
+  
+Clustered and Secondary Indexes
+  one tabel has one clustered index
+  When you define a PRIMARY KEY on a table, InnoDB uses it as the clustered index
+  With a clustered index the rows are stored physically on the disk in the same order as the index.
+  With a non clustered index there is a second list that has pointers to the physical rows
+  one table can have multiple non clustered indexes, although each new index will increase the time it takes to write new records.
+  
+Spatial indexes use R-trees, which are specialized data structures for indexing multi-dimensional data.
+other InnoDB indexes are B-tree data structures. 
+Index records are stored in the leaf pages of their B-tree or R-tree data structure.
+
+TBC...  
+
+ref
+https://dev.mysql.com/doc/refman/8.0/en/innodb-introduction.html
+https://stackoverflow.com/questions/1251636/what-do-clustered-and-non-clustered-index-actually-mean
+https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/ms177443(v=sql.105)?redirectedfrom=MSDN
+https://www.youtube.com/watch?v=ITcOiLSfVJQ

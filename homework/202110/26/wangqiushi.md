@@ -1,0 +1,2 @@
+Q：描述一种敏捷开发框架
+A：Scrum出自橄榄球赛中，像打橄榄球一样迅速和富有战斗激情。scrum是一种运转方式。框架包含三种角色、三个工件和四种会议。角色分为ProductOwner、ScrumMaster、DevelopTeam。ProductOwner团队和客户之间的桥梁。ScrumMaster负责整个scrum流程的顺利实施。DevelopTeam为开发团队。三个工件用来展示进展，确保能够交付，包括productbacklog（项目的完整需求，每一个需求都会优先级排好顺序）\sprintbacklog（冲刺任务进展和追踪）\increment（已完成的）。scrum活动包括冲刺（Sprint）还有4种会议，冲刺开始前有冲刺计划会，确定目标任务。每日站会，团队成员汇报已完成工作和计划和困难。冲刺评审会，开发团队演示已完成的需求，进行验收。冲刺回顾会回顾好的地方和需要改进的地方。

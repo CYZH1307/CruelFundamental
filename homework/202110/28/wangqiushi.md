@@ -1,0 +1,1 @@
+Netty原理。Netty是一个基于JAVA NIO提供的API实现的高性能的异步事件驱动的NIO框架，特点是“快速”和“简单”地实现网络应用的编程开发。Netty的高性能主要来自于两方面。首先，基于I/O复用模型，EventLoop聚合了多路复用器Selector；其次，在主从Reactor多线程的基础上做出修改，Netty的主从Reactor多线程模型有多个Reactor。通过Selector一个线程可以监听多个连接的Channel事件。同时，Netty在Pipeline中使用了责任链模式，Pipeline作为事件处理器，用于处理或拦截Channel的入站事件和出站操作。此外，Netty对buffer还做了一些调整和优化，这也使得其性能大大提高。

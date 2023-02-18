@@ -1,0 +1,9 @@
+### C++: constructor和desctructor能virtual吗
+
+**constructor和destructor不可以调用virtual函数**
+
+**constructor**: 因为构造derived类的对象的时候首先调用base类的constructor，而base类里调用virtual函数是调用base类里的实现,这可能和预期想调用derived类中的virtual函数相违背，即使调用的是derived类中的virtual函数,但此时derived类的对象并没有构造出来,这就导致virtual函数使用未初始化的local成员变量，甚至base类中的virtual函数是pure virtual,调用是没有意义的;
+
+**destructor**:  析构的时候首先析构derived类,再析构base类,因此调用的virtual函数实际是base类中的而不是derived类中的,这未必是代码设计的本意，纵使调用的是derived类中的virtual函数,那么virtual函数可能会使用到derived类对象已经释放的local成员(变成了未初始化的成员) 
+
+如果在base类中需要调用函数,则使用non-vitrual函数吧,其所需的参数可由derived类的static函数传给base类的构造函数，注意一定要用derived类的static函数,因为使用static时才不会使用derived类的非静态(未初始化)成员 

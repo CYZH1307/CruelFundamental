@@ -1,0 +1,4 @@
+# K8S为什么不再使用docker #
+Kubernetess本来就没有准备支持docker，后来是因为docker使用的太广泛了才不得不支持docker。同时kunernetess并没有原生的支持docker，它只是通过中间件（Dockershim）让docker可以在其中运行。
+Docker并不是单纯的被容器化的程序的可执行文件，他是操作系统的抽象，同时这个抽象是面向用户的。对用户友好的抽象对kunernetess来说是负担。kunernetess不得不用中间件去访问他真正所需要的东西。
+所以kunernetess自己搞了容器。

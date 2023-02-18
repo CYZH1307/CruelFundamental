@@ -1,0 +1,7 @@
+docker的原理
+docker是一种沙盒技术。可以使得各个应用之间独立运行，互不干扰，像集装箱一样，可以随处运行。
+在linux中实现docker主要是利用cgroups 和namespace技术。cgroups可以用于限定资源，Namespace可以用于进程间的隔离，实现边界。
+Namespace技术实现隔离性，让运行后的容器仅能看到本身的内容，在容器运行时默认会加上PID, UTS, network, user, mount, IPC, cgroup等namespace. 
+以pid为例，当加入pid namespace后，每个容器内部都可以看到一个PID=1d的进程，但以宿主机的视角这个pid并不是 = 1， 这是由于加入pid namespace后把宿主机的某个进程映射到该namespace下不同的id.在容器内是看不到宿主机的其他进程的， 不同的容器环境被隔离。
+Cgroups技术用于限制进程资源使用的一个技术。 通过cgroup可以为每个进程设定cpu, memory等资源的使用，从而限制访问资源的上限。
+对于文件系统的镜像，不同的docker应用可以看到各自独立的文件系统， 但是各个应用共享宿主机的操作系统内核。

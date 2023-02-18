@@ -1,0 +1,24 @@
+# Elasticsearch 与 Solr 的对比
+
+## Elasticsearch
+- build on Apache Lucene
+- REST API
+- Distributed real-time document store
+- Document search engine
+- High scalability, 
+- Easy to install and use than Solr
+
+## Scenario
+- Wikipedia
+- StackOverflow
+- Github
+- Product search
+- Log Analysis
+
+## Solr
+- Also based on Apache Lucene
+- Lucene is a libary, not a search engine
+- Solr is a wrapper of Lucene, and it's a search engine
+- Solr supports distributed indexing, sharding, replication, load balance, auto failover
+- Used by Netflix, eBay, Instagram, Amazon CloudSearch
+

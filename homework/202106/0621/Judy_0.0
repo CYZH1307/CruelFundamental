@@ -1,0 +1,33 @@
+Components:
+User, Browser, DNS, Server
+
+Main steps
+1. Browser(domain name) <-> DNS(IP)
+2. Browser(request) <-> Server(HTML)
+3. Browser render
+
+Description
+1. User enter URL in browser, browser forward it to DNS for an IP address, DNS then return the IP address.
+  a. Browser cache runs DNS query
+  b. OS cache and router cache runs DNS query
+  c. Query is sent to Resolver Server, ISP and ran in ISP cache
+  d. Root Server tells where, e.g., TLD server, ISP can get the info
+  e. TLD gives address information, ISP can use which to get IP from Authoritative Name Server.
+  f. ISP gets IP from Authoritative Name Server and send back to browser and save cache along the way back.
+2. Browser first builds the connsctions with the server, then sends a request to it, and get response from it
+  a. Browser builts connections with remote server over network by 'TCP 3-way handshake'
+    . client sends SYN to server
+    . server sends acknowledge + SYN to client
+    . client sends acknowledge to server
+  b. Client sends request to the server
+  c. The server response with content
+3. Broswer render
+  
+URL: protocal + domain name, e.g., http://www.hi.com
+DNS: Domain Name System
+ISP: Internat Service Provider
+TLD: Top Level Domain
+
+Reference:
+https://www.freecodecamp.org/news/what-happens-when-you-hit-url-in-your-browser/
+https://wsvincent.com/what-happens-when-url/#:~:text=You%20enter%20a%20URL%20into,sends%20back%20a%20HTTP%20response

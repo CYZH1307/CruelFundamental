@@ -1,0 +1,35 @@
+Closing a TCP connection is more complexed than creating.
+It has to make sure both ends of the two host release thier connection correctly.
+And there are 6 states during TCP connection closement.
+1. Client sent a FIN request to Server.(FIN_WAIT_1, waiting for ACK from Server)
+
+2. Server received the FIN request, returned a ACK message to Client and pending closing the application.(Close Wait)
+*why it needs to pending closing?
+TCP is a reliable connection, which can't tolerant any lost of data.
+In case some data is missing or delayed because of network issue, it has to hold the connection until all data processed.
+
+3. Client received ACK message from Server, and begin to close its job.(FIN_WAIT_2)
+
+4. Server had closed the application and sent a FIN request back to Client.(LAST_ACK)
+
+5. Client had clsed its job, and on sending the final ACK request to Server.(TIME_WAIT)
+*In case network issue, in case the ACK message is missing, Client could send the request several times.
+
+6. Server received the final ACK request and released tcp connection.
+
+reference: https://www.geeksforgeeks.org/tcp-connection-termination/
+
+
+How to check TCP connection status in Linus server?
+command: netstat -n | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'
+it would list the TCP status and how many processes are in this stage.
+For example:
+CLOSE_WAIT 100
+ESTABLISHED 100
+FIN_WAIT_1 100
+FIN_WAIT_2 100
+SYN_SENT 100
+SYN_RECV 100
+TIME_WAIT 100
+LAST_ACK 100
+Poor knowledge about Linux commands, need to check more details about 'netstat'.

@@ -1,0 +1,23 @@
+Generic in java
+Generic only provide safety in compile time.
+It is implemented by type erasure and after compilement, all generic types would become 'Object'.
+There is one thing worth to mention, the <? super T> and <? extends T>.
+1. <? super T> means all superclass of type T is leagal.
+You don't know which class is it, so it's unsafe to read unless you want to get an 'Object' type.
+For writing, all the supercalss of T is leagal to assign to it.
+
+Example, assume A extends B, B extends C
+List<? super A> list = new LinkedList<B>();
+List<? super A> list = new LinkedList<C>();
+List<? super A> list = new LinkedList<Object>();
+You can add either A or its subclass to the list.
+But you can't read as you would get a type with <? super A>, which could be B, C,..., Object.
+2. <? entends T> means all generic type extends T is legal.
+But when reading, you could only get type T as you can't figure out which subclass is it pointed to
+For writing, it's illegal to assign any object to it as it could result to assign a reference of subclass1 to subclass2, which is unsafe.
+
+Example, assume B extends A, C extends A
+List<? entends A> list = new LinkedList<B>();
+List<? entends A> list = new LinkedList<C>();
+You can't add any element cause you don't know which subclass is it acutually assigned.
+But you can get any element with type A.

@@ -1,0 +1,18 @@
+1. BIO: Blocking IO
+When do IO operations, include reading and writing, the whole thread would blocks there until all tasks finished.
+2. NIO: Non-blocking IO
+It's based on event-driven design.
+Thread is used to map the request to a multiplex selector.
+Selector would do loop checking if there is a new IO request, and assign a thread to it if any request detected.
+The assigned thread would keeping checking if the IO process is finished, and return the result.
+Compared to BIO, use NIO could save more resource to handle coming requests.
+3. AIO: Asynchronous Non-blocking IO
+It's an upgrade of NIO.
+The difference is the thread which handle IO processing would run in background, no others would be blocked by it.
+When the IO operation is finished, it would call some callback method.
+Compared to NIO, it saves cost of checking if the IO process is finished.
+4. Why Redis is so quick
+Redis is memory based and single threaded.
+Memory based makes IO operation quick.
+Single threaded saves cost of context switching.
+It uses multiplex, which means the only IO thread would be applied for all coming requests.
