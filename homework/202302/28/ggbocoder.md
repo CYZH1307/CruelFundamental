@@ -1,0 +1,7 @@
+- 方案一：SETNX + EXPIRE
+- 方案二：SETNX + value值是（系统时间+过期时间）
+- 方案三：使用Lua脚本(包含SETNX + EXPIRE两条指令)
+- 方案四：SET的扩展命令（SET EX PX NX）
+- 方案五：SET EX PX NX  + 校验唯一随机值,再释放锁
+- 方案六: 开源框架~Redisson
+- 方案七：多机实现的分布式锁Redlock
