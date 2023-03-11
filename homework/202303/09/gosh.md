@@ -1,0 +1,3 @@
+讲讲QUIC的流量控制和拥塞控制
+
+QUIC是基于UDP传输的，而UDP没有流量控制，因此QUIC实现了自己的流量控制机制，分为Stream和Connection两种级别
